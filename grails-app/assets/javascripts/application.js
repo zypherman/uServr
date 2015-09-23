@@ -8,6 +8,7 @@
 //= require jquery
 //= require_tree .
 //= require_self
+//= require knockout
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {

@@ -21,7 +21,9 @@
 		<h1>uServr</h1>
 		<hr/>
 	</header>
+	<g:applyLayout name="pages/oneBlock">
 		<g:layoutBody/>
+	</g:applyLayout>
 		<div class="footer" role="contentinfo"></div>
 	</body>
 </html>

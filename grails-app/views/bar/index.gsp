@@ -10,6 +10,12 @@
     <content tag="details">
         <h1>The Bar Body</h1>
     </content>
+    <content tag="templates">
+        <g:render template="/templates/orders"/>
+    </content>
+    <content tag="scripts">
+        <g:javascript src="orders/orders.js"/>
+    </content>
 </g:applyLayout>
 </body>
 </html>
