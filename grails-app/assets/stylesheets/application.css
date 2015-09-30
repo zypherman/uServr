@@ -9,4 +9,5 @@
 *
 *= require_self
 *= require bootstrap.min
+*= require user
 */

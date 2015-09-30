@@ -7,37 +7,14 @@
 <body>
 <g:applyLayout name="pages/user">
     <content tag="details">
-        <h1>The User Body</h1>
-
-        <div class="order">
-            <label for="name">
-                Name:
-                <input id="name" type="text" name="name"/>
-            </label>
-            <button class="order btn-primary" name="order">Order</button>
+        <div class="row">
+            <div class="col-sm-6">
+                <a class=" btn btn-default" href="/user/drink">Drink</a>
+            </div>
+            <div class="col-sm-6">
+                <g:submitButton name="food" value="Food"/>
+            </div>
         </div>
-    </content>
-    <content tag="scripts">
-        <script>
-
-            $('.order').click(function() {
-                var value = $('#name').val();
-                $('#name').val('');
-
-                $.ajax({
-                    url: '/bar/order',
-                    method: 'POST',
-                    dataType: 'json',
-                    data: {
-                        name: value
-                    }
-                });
-
-            });
-
-
-
-        </script>
     </content>
 </g:applyLayout>
 </body>

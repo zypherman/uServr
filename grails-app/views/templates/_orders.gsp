@@ -6,9 +6,11 @@
             </th>
         </tr>
     </thead>
-    <tbody data-bind="foreach: people">
-        <tr>
-            <td data-bind="text: name"></td>
-        </tr>
+    <tbody>
+        <!-- ko foreach: people -->
+            <tr>
+                <td data-bind="text: $data.name, click: $root.delete"></td>
+            </tr>
+        <!-- /ko -->
     </tbody>
 </table>
