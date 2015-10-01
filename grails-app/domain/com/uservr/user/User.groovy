@@ -17,7 +17,6 @@ class User {
     static constraints = {
                 username blank: false
                 password blank: false
-
     }
 
 }
