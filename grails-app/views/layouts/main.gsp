@@ -29,7 +29,7 @@
     <g:layoutBody/>
 </g:applyLayout>
 <div class="footer" role="contentinfo">
-		<g:render template="/templates/footer"/>
+    <g:render template="/templates/footer"/>
 </div>
 </body>
 </html>

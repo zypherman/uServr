@@ -1,4 +1,5 @@
 package com.uservr.bar
+
 import bar.BarService
 import grails.converters.JSON
 
@@ -15,7 +16,7 @@ class BarController {
         response.setContentType('text/event-stream')
         response.setCharacterEncoding('UTF-8')
 
-        def orders = JSON.use('deep') {raw(barService.getNewOrders() as JSON)}
+        def orders = JSON.use('deep') { raw(barService.getNewOrders() as JSON) }
         def writer = response.getWriter();
 
         if (orders) {
@@ -33,7 +34,7 @@ class BarController {
     }
 
     def getCurrentOrders() {
-        render JSON.use('deep') {raw(barService.getCurrentOrders() as JSON)}
+        render JSON.use('deep') { raw(barService.getCurrentOrders() as JSON) }
     }
 
     def processOrder() {
