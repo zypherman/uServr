@@ -1,8 +1,5 @@
 package com.uservr.user
 
-/**
- * Created by John on 9/30/15.
- */
 class User {
 
     Long id
@@ -17,9 +14,9 @@ class User {
         "$username"
     }
 
-    def constraints = {
-                username(username:true)
-                password(password:true)
+    static constraints = {
+                username blank: false
+                password blank: false
 
     }
 
