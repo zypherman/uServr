@@ -9,6 +9,7 @@
 //= require_tree .
 //= require_self
 //= require knockout
+//= require bootstrap.min
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {
