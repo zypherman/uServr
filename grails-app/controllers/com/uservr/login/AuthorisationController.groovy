@@ -36,5 +36,6 @@ class AuthorisationController {
 
     def logout = {
         session.user = null;
+        redirect(action: 'login')
     }
 }

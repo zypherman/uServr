@@ -17,11 +17,10 @@ class User {
         "$username"
     }
 
-    def constraints =
-            {
+    def constraints = {
                 username(username:true)
-                password(blank:false, password:true)
+                password(password:true)
 
-            }
+    }
 
 }
