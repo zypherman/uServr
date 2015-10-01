@@ -1,22 +1,22 @@
-package com.uservr.user
+package com.uservr.web
 
-class User {
+class Customer {
 
     Long id
     Long version
 
+    String name
+
     String username
     String password
-
-    String name
 
     String toString() {
         "$username"
     }
 
     static constraints = {
-                username blank: false
-                password blank: false
+        username blank: false
+        password blank: false
     }
 
 }

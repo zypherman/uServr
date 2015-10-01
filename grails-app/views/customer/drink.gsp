@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<g:applyLayout name="pages/user">
+<g:applyLayout name="pages/customer">
     <content tag="details">
         <h3>Drink</h3>
         <div class="drink-table">

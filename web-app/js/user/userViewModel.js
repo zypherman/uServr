@@ -16,7 +16,7 @@ function UserViewModel() {
 
     userViewModel.sendOrder = function() {
         $.ajax({
-            url: '/user/sendOrder',
+            url: '/customer/sendOrder',
             method: 'POST',
             dataType: 'json',
             contentType: 'application/json',
@@ -27,7 +27,7 @@ function UserViewModel() {
     };
 
     $.ajax({
-        url: '/user/getOrder'
+        url: '/customer/getOrder'
     }).done(function(data) {
         userViewModel.orders(data);
     }).fail(function(data) {
@@ -36,7 +36,7 @@ function UserViewModel() {
 
     function add(order) {
         $.ajax({
-            url: '/user/addItem',
+            url: '/customer/addItem',
             method: 'POST',
             dataType: 'json',
             contentType: 'application/json',
@@ -46,7 +46,7 @@ function UserViewModel() {
 
     function remove(order) {
         $.ajax({
-            url: '/user/removeItem',
+            url: '/customer/removeItem',
             method: 'POST',
             dataType: 'json',
             contentType: 'application/json',
