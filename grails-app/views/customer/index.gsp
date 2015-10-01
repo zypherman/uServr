@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<g:applyLayout name="pages/user">
+<g:applyLayout name="pages/customer">
     <content tag="details">
         <div class="row">
             <div class="col-sm-6">

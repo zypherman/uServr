@@ -1,9 +1,10 @@
-import com.uservr.user.*;
+import com.uservr.web.*
 
 class BootStrap {
 
     def init = { servletContext ->
-        new User(username: "eg@eg.com",password:"password").save()
+        //new Customer(username: "bob@bsb.com",password:"password", name:"Bob Buttlicker").save(failOnError: true)
+        Customer.findOrSaveWhere(username: "bill",password:"password", name:"Bill Buttlicker")
     }
     def destroy = {
     }

@@ -7,15 +7,16 @@
 <body>
 <div class="body">
   <g:form action="doLogin" method="post">
+      <div class="alert alert-error" style="display: block font-color: red">${flash.error}</div>
     <div class="dialog">
       <p>Enter your login details below:</p>
       <table class="userForm">
         <tr class='prop'>
           <td valign='top' style='text-align:left;' width='20%'>
-            <label for='email'>Email:</label>
+            <label for='username'>Username:</label>
           </td>
           <td valign='top' style='text-align:left;' width='80%'>
-            <input id="email" type='text' name='email' value='${user?.email}' />
+            <input id="username" type='text' name='username' value='${customer?.username}' />
           </td>
         </tr>
         <tr class='prop'>

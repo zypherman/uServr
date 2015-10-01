@@ -1,15 +1,11 @@
-package com.uservr.user
+package com.uservr.customer
 
-import com.uservr.login.AuthorisationController
 import grails.converters.JSON
 import menu.MenuService
 
-class UserController extends AuthorisationController {
+class CustomerController {
 
     MenuService menuService
-
-    //before we show the page lets check to see if their logged in, if not redirect them to log in
-    def beforeInterceptor = [action: 'checkUser', except: ['index']]
 
     def index() {
         render view: 'index'
