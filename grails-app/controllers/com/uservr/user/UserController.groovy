@@ -9,7 +9,7 @@ class UserController extends AuthorisationController {
     MenuService menuService
 
     //before we show the page lets check to see if their logged in, if not redirect them to log in
-    def beforeInterceptor = [action: this.&checkUser, except: ['index']]
+    def beforeInterceptor = [action: 'checkUser', except: ['index']]
 
     def index() {
         render view: 'index'
