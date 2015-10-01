@@ -21,8 +21,8 @@ class LoginController {
         if (customer) {
             session.customer = customer
             session.name = customer.name
-            forward (controller: 'customer', action: 'index')
-            return false
+            render (uri: "customer/index")
+            return
         }
         else { //Otherwise flash a message that you were not found
             flash.error = "Customer not found, please try again or register" //FixMe put this in the messages.properties

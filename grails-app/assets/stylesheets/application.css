@@ -9,6 +9,8 @@
 *
 *= require_self
 *= require bootstrap.min
-*= require user
+*= require customer
 *= require bar
+*= require login
+*= require footer
 */

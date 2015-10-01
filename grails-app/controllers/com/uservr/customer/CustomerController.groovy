@@ -13,7 +13,7 @@ class CustomerController {
 
     def drink() {
         def drinkViewModel = menuService.getAvailableDrinks();
-        render view: 'drink', model: [drinkViewModel: JSON.use('deep') { raw(drinkViewModel as JSON)}]
+        render view: 'drink', model: [drinkViewModel: JSON.use('deep') { raw(drinkViewModel as JSON) }]
     }
 
     def addItem() {
@@ -25,7 +25,7 @@ class CustomerController {
     }
 
     def getOrder() {
-        render JSON.use('deep') {raw(menuService.getOrder() as JSON)}
+        render JSON.use('deep') { raw(menuService.getOrder() as JSON) }
     }
 
     def sendOrder() {
