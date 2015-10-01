@@ -20,7 +20,6 @@ class User {
     def constraints = {
                 username(username:true)
                 password(password:true)
-
     }
 
 }

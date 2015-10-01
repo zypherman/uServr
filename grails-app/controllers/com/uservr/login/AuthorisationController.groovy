@@ -19,9 +19,9 @@ class AuthorisationController {
     }
 
     def doLogin = {
-        def user = User.findWhere(email: params['email'], password: params['password'])
+        def user = User.findWhere(username: params['usernam'], password: params['password'])
         session.user = user
-        if (user) redirect(controller: 'index', action: 'menu')
+        if (user) redirect(controller: 'menu', action: 'index')
         else redirect(controller: 'user', action: 'login')
     }
 
