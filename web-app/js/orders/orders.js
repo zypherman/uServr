@@ -1,7 +1,7 @@
 function OrderViewModel() {
     var orderViewModel = this;
 
-    orderViewModel.people = ko.observableArray();
+    orderViewModel.orders = ko.observableArray();
 
     var event = new EventSource('/bar/order');
 
@@ -9,13 +9,13 @@ function OrderViewModel() {
         if (event.data.length > 2) {
             var orders = JSON.parse(event.data);
             for (var i = 0; i < orders.length; i++) {
-                orderViewModel.people.push(orders[i]);
+                orderViewModel.orders.push(orders[i]);
             }
         }
     };
 
     orderViewModel.delete = function(e, d) {
-        orderViewModel.people.remove(e);
+        orderViewModel.orders.remove(e);
         processOrder(e);
     };
 
@@ -26,7 +26,7 @@ function OrderViewModel() {
             url: 'bar/getCurrentOrders'
         }).done(function(data) {
             if (data.length > 0) {
-                orderViewModel.people(data);
+                orderViewModel.orders(data);
             }
         }).fail(function(data) {
             console.log('fail ' + data);
