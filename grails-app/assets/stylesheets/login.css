@@ -78,9 +78,9 @@
 }
 
 .btn-primary {
-    background-color: #bfbd03;
+    background-color: #5cb85c;
 }
 
 .btn-primary:hover {
-    background-color: red;
+    background-color: orange;
 }

@@ -13,4 +13,5 @@
 *= require bar
 *= require login
 *= require footer
+*= require header
 */
