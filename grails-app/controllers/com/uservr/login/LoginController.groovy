@@ -6,22 +6,18 @@ class LoginController {
 
     def index() {}
 
-    //Adds the customer to the session object so they are logged in
-    def login = {
-    }
-
     //Register customer
     def register = {
     }
 
-    def doLogin = {
+    def login = {
         def customer = Customer.findWhere(username: params['username'], password: params['password'])
 
         //If we found a customer then do some stuff
         if (customer) {
             session.customer = customer
             session.name = customer.name
-            render (uri: "customer/index")
+            forward(controller: 'customer', action: 'index')
             return
         }
         else { //Otherwise flash a message that you were not found
