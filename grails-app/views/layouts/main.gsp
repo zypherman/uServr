@@ -18,12 +18,8 @@
 </head>
 
 <body>
-<header>
-    <h1>uServr</h1>
-    <g:if test="${session.customer}">
-        <div class="message" role="status">Hello ${session.name} !</div>
-    </g:if>
-    <hr/>
+<header class="header">
+    <g:render template="/templates/header"/>
 </header>
 <g:applyLayout name="pages/oneBlock">
     <g:layoutBody/>

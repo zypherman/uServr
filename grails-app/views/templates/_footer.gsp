@@ -1,6 +1,5 @@
-<hr/>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div>Footer</div>
+        <div>uServr</div>
     </div>
 </div>
