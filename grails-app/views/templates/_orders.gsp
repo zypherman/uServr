@@ -5,6 +5,7 @@
             Name
         </th>
         <th></th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -22,6 +23,9 @@
                     </div>
                 </div>
             </div>
+        </td>
+        <td>
+            <timer></timer>
         </td>
         <td>
             <div class="bar-buttons">

@@ -34,11 +34,6 @@ class MenuService {
         userOrder
     }
 
-    def sendOrder(JSONObject order) {
-        barService.newOrders(order)
-        userOrder.removeAll(userOrder)
-    }
-
     def sendOrder(JSONArray orders) {
         barService.newOrders(orders)
         userOrder.removeAll(userOrder)
