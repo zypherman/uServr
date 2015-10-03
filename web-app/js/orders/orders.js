@@ -43,6 +43,46 @@ function OrderViewModel() {
         })
     }
 
+    ko.components.register('timer', {
+        viewModel: function(params) {
+            var self = this;
+            self.timer = ko.observable();
+            self.timerClass = ko.observable();
+
+            self.timerClass('label label-success');
+            time();
+
+            function time() {
+                var now = Date.now();
+                setInterval(function() {
+                    getTime(now);
+                }, 1000);
+            }
+
+            function getTime(now) {
+                var date = new Date(Date.now() - now);
+                var m = format(date.getMinutes());
+                var s = format(date.getSeconds());
+                getTimerClass(s);
+                self.timer(m + ':' + s);
+            }
+
+            function getTimerClass(s) {
+                if (s > 30) {
+                    self.timerClass('label label-danger')
+                } else if (s > 10) {
+                    self.timerClass('label label-warning')
+                }
+            }
+
+            function format(i) {
+                if (i < 10) {i = "0" + i}
+                return i;
+            }
+        },
+        template: '<h4><span data-bind="text: timer, attr: {class: timerClass}"></span></h4>'
+    });
+
     ko.applyBindings(orderViewModel, $('.table')[0]);
 
 }
