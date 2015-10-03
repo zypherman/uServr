@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<header class="header">
+<header>
     <g:render template="/templates/header"/>
 </header>
 <g:applyLayout name="pages/oneBlock">

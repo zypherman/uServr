@@ -1,10 +1,8 @@
 <div role="heading" class="header">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 text-center">
-                <g:img class="brand center-block" dir="images" file="WaiterIcon.png" href="#"/>
+            <div class="col-md-2">
             </div>
-
             <div class="col-md-8">
                 <h1 class="title text-center">uServr</h1>
             </div>

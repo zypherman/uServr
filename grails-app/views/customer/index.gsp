@@ -9,7 +9,7 @@
     <content tag="details">
         <div class="row">
             <div class="col-sm-6">
-                <a class=" btn btn-default" href="/user/drink">Drink</a>
+                <a class=" btn btn-default" href="/customer/drink.gsp">Drink</a>
             </div>
             <div class="col-sm-6">
                 <g:submitButton name="food" value="Food"/>
