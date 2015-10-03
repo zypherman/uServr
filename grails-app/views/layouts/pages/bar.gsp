@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-3">
-        <g:render template="/templates/leftNav"/>
+        <g:render template="/templates/leftNav" model="[name: 'Bar']"/>
     </div>
     <div class="col-sm-9">
         <g:pageProperty name="page.details"/>

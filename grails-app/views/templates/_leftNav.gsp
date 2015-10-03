@@ -8,25 +8,16 @@
                 </a>
             </li>
             <li>
-                <a href="#">Dashboard</a>
+                <g:link class="leftnav-link" controller="customer"
+                        action="index">Customer Home</g:link>
             </li>
             <li>
-                <a href="#">Shortcuts</a>
+                <g:link class="leftnav-link" controller="bar"
+                        action="index">Bar</g:link>
             </li>
             <li>
-                <a href="#">Overview</a>
-            </li>
-            <li>
-                <a href="#">Events</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
+                <g:link class="leftnav-link" controller="kitchen"
+                        action="index">Kitchen</g:link>
             </li>
         </ul>
     </div>
