@@ -1,7 +1,7 @@
 /* Toggle Styles */
 
 #wrapper {
-    padding-left: 0;
+    padding-right: 10px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -20,13 +20,11 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background:  #5cb85c;
+    background: #aacad8;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    border-right: medium solid orange;
-    border-bottom: medium solid orange;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -68,7 +66,7 @@
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: orange;
+    color: #066B97;
     background: rgba(255,255,255,0.2);
 }
 
@@ -88,8 +86,18 @@
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: orange;
+    color: #066B97;
     background: none;
+}
+
+.logout {
+    color: white;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.logout:hover {
+    background-color: gray;
 }
 
 @media(min-width:768px) {

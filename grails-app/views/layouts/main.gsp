@@ -18,14 +18,11 @@
 </head>
 
 <body>
-<header>
-    <g:render template="/templates/header"/>
-</header>
+<nav>
+    <g:render template="/templates/leftNav"/>
+</nav>
 <g:applyLayout name="pages/oneBlock">
     <g:layoutBody/>
 </g:applyLayout>
-<div class="footer" role="contentinfo">
-    <g:render template="/templates/footer"/>
-</div>
 </body>
 </html>
