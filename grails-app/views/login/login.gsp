@@ -15,7 +15,7 @@
                 <g:img class = "profile-img" dir="images" file="WaiterIcon.png"/>
                 <g:form action="login" method="post" class="form-signin">
                     <table class="userForm">
-                        <tr class='prop'>
+                        <tr class='prop field'>
                             <td valign='top' style='text-align:left;' width='20%'>
                                 <label for='username' class="labelText">Username:</label>
                             </td>
@@ -24,7 +24,7 @@
                                        value='${customer?.username}' placeholder="Username" required autofocus/>
                             </td>
                         </tr>
-                        <tr class='prop'>
+                        <tr class='prop field'>
                             <td valign='top' style='text-align:left;' width='20%'>
                                 <label for='password' class="labelText">Password:</label>
                             </td>
@@ -32,6 +32,11 @@
                                 <input id="password" type='password' name='password' class="form-control"
                                        placeholder="Password" required
                                        value='${user?.password}'/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <g:link controller="login" action="renderRegister" value="Register">Register</g:link>
                             </td>
                         </tr>
                     </table>
