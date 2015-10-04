@@ -1,4 +1,4 @@
-<div class="container-fluid main-container">
+<div class="col-md-9">
     <g:if test="${!controllerName=='login'}">
         <div>
             <g:render template="/templates/leftNav"/>

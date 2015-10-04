@@ -78,9 +78,17 @@
 }
 
 .btn-primary {
-    background-color: #5cb85c;
+    background-color: #066B97;
 }
 
 .btn-primary:hover {
-    background-color: orange;
+    background-color: gray;
+}
+
+.btn-success {
+    background-color: #066B97;
+}
+
+.btn-success:hover {
+    background-color: gray;
 }
