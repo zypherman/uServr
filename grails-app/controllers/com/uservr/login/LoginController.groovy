@@ -7,7 +7,14 @@ class LoginController {
     def index() {}
 
     //Register customer
-    def register = {
+    def register() {
+        def customer = new Customer(username: params['username'], password: params['password'], name: params['username']).save()
+        forward(controller: 'login', action: 'login')
+        return
+    }
+
+    def renderRegister() {
+        render view: 'register' //FixMe do this the correct way
     }
 
     def login = {
@@ -19,8 +26,7 @@ class LoginController {
             session.name = customer.name
             forward(controller: 'customer', action: 'index')
             return
-        }
-        else { //Otherwise flash a message that you were not found
+        } else { //Otherwise flash a message that you were not found
             flash.error = "Customer not found, please try again or register" //FixMe put this in the messages.properties
             return
         }
