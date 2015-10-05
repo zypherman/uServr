@@ -10,7 +10,6 @@ class LoginController {
     def register() {
         def customer = new Customer(username: params['username'], password: params['password'], name: params['username']).save()
         forward(controller: 'login', action: 'login')
-        return
     }
 
     def renderRegister() {

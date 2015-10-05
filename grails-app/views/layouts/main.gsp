@@ -18,9 +18,6 @@
 </head>
 
 <body>
-<nav>
-    <g:render template="/templates/leftNav"/>
-</nav>
 <g:applyLayout name="pages/oneBlock">
     <g:layoutBody/>
 </g:applyLayout>
