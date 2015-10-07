@@ -13,6 +13,8 @@
                 <tbody data-bind="foreach: ${drinkViewModel}">
                     <tr data-bind="click: $parent.add">
                         <td data-bind="text: $data.name"></td>
+                        <td data-bind="text: $data.description"></td>
+                        <td data-bind="text: $data.price"></td>
                     </tr>
                 </tbody>
             </table>
