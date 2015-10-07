@@ -13,13 +13,13 @@ class MenuService {
     ConcurrentLinkedQueue userOrder = new ConcurrentLinkedQueue()
 
     def getAvailableDrinks() {
-        [new DrinkDTO(name: 'Bud', description: 'Good Beer', price: '$1.00'),
-         new DrinkDTO(name: 'Coors', description: 'Silver Bullet', price: '$1.00'),
-         new DrinkDTO(name: 'Miller', description: 'Beer', price: '$1.00'),
-         new DrinkDTO(name: 'Martini', description: 'Alcohol', price: '$4.00'),
-         new DrinkDTO(name: 'Wine', description: 'Red & White', price: '$3.00'),
-         new DrinkDTO(name: 'Soda', description: 'Pop', price: '$1.00'),
-         new DrinkDTO(name: 'Moonshine', description: 'Shine', price: '$10.00')]
+        [new DrinkDTO(name: 'Bud', description: 'Good Beer', price: 1.00),
+         new DrinkDTO(name: 'Coors', description: 'Silver Bullet', price: 1.00),
+         new DrinkDTO(name: 'Miller', description: 'Beer', price: 1.00),
+         new DrinkDTO(name: 'Martini', description: 'Alcohol', price: 4.00),
+         new DrinkDTO(name: 'Wine', description: 'Red & White', price: 3.00),
+         new DrinkDTO(name: 'Soda', description: 'Pop', price: 1.00),
+         new DrinkDTO(name: 'Moonshine', description: 'Shine', price: 10.00)]
     }
 
     def addItem(JSONObject item) {

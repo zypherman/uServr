@@ -21,11 +21,11 @@
                         </li>
                         <li>
                             <g:link class="leftnav-link" controller="bar"
-                                    action="index">Bar</g:link>
+                                    action="index">Food</g:link>
                         </li>
                         <li>
                             <g:link class="leftnav-link" controller="kitchen"
-                                    action="index">Kitchen</g:link>
+                                    action="index">Drinks</g:link>
                         </li>
                         <li>
                             <g:if test="${session.customer}">

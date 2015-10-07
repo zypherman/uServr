@@ -33,9 +33,12 @@
 }
 
 .form-signin input[type="password"] {
-    margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+.register {
+    margin-top: 10px;
 }
 
 .account-wall {
