@@ -16,6 +16,13 @@ class CustomerControllerSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
+    void "sample test"() {
+        given:
+        def number = 7
+        def number2 = 8
+        when:
+        def total = 7 + 8
+        then:
+        assert total == 15
     }
 }
