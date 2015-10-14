@@ -1,47 +1,31 @@
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="col-md-3">
-            <div id="wrapper">
-                <!-- Sidebar -->
-                <div id="sidebar-wrapper">
-                    <ul class="sidebar-nav">
-                        <li class="user-info">
-                            <g:if test="${session.customer}">
-                                <div class="message user-name" role="status">Hello ${session.name}!</div>
-                            </g:if>
-                        </li>
-                        <li class="sidebar-brand">
-                            <a href="#">
-                                <h3>${name}</h3>
-                            </a>
-                        </li>
+<div class="row">
+    <div class="col-md-3">
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <h3>${name}</h3>
+                <ul class="sidebar-nav">
+                    <g:each in="${links}" var="link">
                         <li>
-                            <g:link class="leftnav-link" controller="customer"
-                                    action="index">Customer Home</g:link>
+                            <g:link class="leftnav-link" controller="${link.controller}"
+                                    action="${link.action}">${link.name}</g:link>
                         </li>
-                        <li>
-                            <g:link class="leftnav-link" controller="bar"
-                                    action="index">Food</g:link>
-                        </li>
-                        <li>
-                            <g:link class="leftnav-link" controller="kitchen"
-                                    action="index">Drinks</g:link>
-                        </li>
-                        <li>
-                            <g:if test="${session.customer}">
-                                <button class="btn logout"><g:link class="logout" controller="login"
-                                                                   action="logout">Logout</g:link></button>
-                            </g:if>
-                            <g:else test="!${session.customer}">
-                                <button class="btn logout"><g:link class="logout" controller="login"
-                                                                   action="login">Login</g:link></button>
-                            </g:else>
-                        </li>
-                    </ul>
+                    </g:each>
+                    <li>
+                        <g:if test="${session.customer}">
+                            <button class="btn logout"><g:link class="logout" controller="login"
+                                                               action="logout">Logout</g:link></button>
+                        </g:if>
+                        <g:else test="!${session.customer}">
+                            <button class="btn logout"><g:link class="logout" controller="login"
+                                                               action="login">Login</g:link></button>
+                        </g:else>
+                    </li>
+                </ul>
+
                 <div class="footer">uServr</div>
-                </div>
-                <!-- /#sidebar-wrapper -->
             </div>
+            <!-- /#sidebar-wrapper -->
         </div>
     </div>
 </div>

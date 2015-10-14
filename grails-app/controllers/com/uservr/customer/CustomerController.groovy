@@ -16,6 +16,10 @@ class CustomerController {
         render view: 'drink', model: [drinkViewModel: JSON.use('deep') { raw(drinkViewModel as JSON) }]
     }
 
+    def food() {
+        render view: 'index'
+    }
+
     def addItem() {
         render menuService.addItem(request.JSON.order)
     }
