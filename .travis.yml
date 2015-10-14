@@ -5,6 +5,6 @@ jdk:
 
 script: ./grailsw clean
   && ./grailsw refresh-dependencies
-  && ./grailsw “test-app”
+  && ./grailsw test-app
 
 
