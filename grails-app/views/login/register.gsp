@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>User Login</title>
+    <title>User Register</title>
 </head>
 
 <body>

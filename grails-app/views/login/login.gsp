@@ -36,7 +36,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <g:link controller="login" action="renderRegister" value="Register" class="register">Register</g:link>
+                                <a href="/login/register.gsp">Register</a>
                             </td>
                         </tr>
                     </table>

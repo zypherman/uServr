@@ -35,4 +35,8 @@ class CustomerController {
     def sendOrder() {
         render menuService.sendOrder(request.JSON.order)
     }
+
+    def welcome() {
+        render view: 'welcome', model: [menuItems: menuService.getAvailableDrinks()]
+    }
 }

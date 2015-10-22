@@ -17,3 +17,8 @@
 *= require leftnav
 *= require orders
 */
+
+.menu-item-image {
+    width: 50%;
+    height: 50%;
+}
