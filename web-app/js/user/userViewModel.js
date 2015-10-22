@@ -4,33 +4,33 @@ function UserViewModel() {
 
     userViewModel.orders = ko.observableArray();
 
-    userViewModel.add = function(e) {
+    userViewModel.add = function (e) {
         userViewModel.orders.push(e);
         add(e);
     };
 
-    userViewModel.remove = function(e) {
+    userViewModel.remove = function (e) {
         userViewModel.orders.remove(e);
         remove(e);
     };
 
-    userViewModel.sendOrder = function() {
+    userViewModel.sendOrder = function () {
         $.ajax({
             url: '/customer/sendOrder',
             method: 'POST',
             dataType: 'json',
             contentType: 'application/json',
             data: JSON.stringify({order: userViewModel.orders()})
-        }).done(function() {
+        }).done(function () {
             userViewModel.orders.removeAll();
         })
     };
 
     $.ajax({
         url: '/customer/getOrder'
-    }).done(function(data) {
+    }).done(function (data) {
         userViewModel.orders(data);
-    }).fail(function(data) {
+    }).fail(function (data) {
         console.log('fail ' + data);
     });
 
@@ -54,7 +54,7 @@ function UserViewModel() {
         })
     }
 
-    $('.order').click(function() {
+    $('.order').click(function () {
         var name = $('#name');
         var value = {name: name.val()};
         name.val('');

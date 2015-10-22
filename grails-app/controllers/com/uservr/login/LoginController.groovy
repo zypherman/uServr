@@ -8,12 +8,9 @@ class LoginController {
 
     //Register customer
     def register() {
-        def customer = new Customer(username: params['username'], password: params['password'], name: params['username']).save()
+        render view: 'register'
+        Customer.findOrSaveWhere(username: params['username'], password: params['password'], name: params['username'])
         forward(controller: 'login', action: 'login')
-    }
-
-    def renderRegister() {
-        render view: 'register' //FixMe do this the correct way
     }
 
     def login = {

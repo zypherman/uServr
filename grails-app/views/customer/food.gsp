@@ -1,16 +1,25 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: John
-  Date: 10/19/15
-  Time: 10:52 PM
---%>
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-  <title></title>
+  <meta name="layout" content="main">
 </head>
-<body>
 
+<body>
+<g:applyLayout name="pages/customer">
+  <content tag="details">
+    <h3>Food</h3>
+    <div class="food-table">
+      <table class="table">
+        <tbody data-bind="foreach: ${foodViewModel}">
+        <tr data-bind="click: $parent.add">
+          <td data-bind="text: $data.name"></td>
+          <td data-bind="text: $data.description"></td>
+          <td data-bind="text: $data.price"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </content>
+</g:applyLayout>
 </body>
 </html>
