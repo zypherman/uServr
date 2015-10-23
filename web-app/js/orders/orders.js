@@ -23,7 +23,7 @@ function OrderViewModel() {
 
     function getCurrentOrders() {
         $.ajax({
-            url: 'bar/getCurrentOrders'
+            url: '/bar/getCurrentOrders'
         }).done(function(data) {
             if (data.length > 0) {
                 orderViewModel.orders(data);
@@ -35,7 +35,7 @@ function OrderViewModel() {
 
     function processOrder(order) {
         $.ajax({
-            url: 'bar/processOrder',
+            url: '/bar/processOrder',
             method: 'POST',
             dataType: 'json',
             contentType: 'application/json',
@@ -63,14 +63,14 @@ function OrderViewModel() {
                 var date = new Date(Date.now() - now);
                 var m = format(date.getMinutes());
                 var s = format(date.getSeconds());
-                getTimerClass(s);
+                getTimerClass(m, s);
                 self.timer(m + ':' + s);
             }
 
-            function getTimerClass(s) {
-                if (s > 30) {
+            function getTimerClass(m, s) {
+                if (m < 1 && s > 30) {
                     self.timerClass('label label-danger')
-                } else if (s > 10) {
+                } else if (m < 1 && s > 10) {
                     self.timerClass('label label-warning')
                 }
             }

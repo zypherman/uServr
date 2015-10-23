@@ -18,11 +18,11 @@
                 <div class="collapse" data-bind="attr: {id: $index}">
                     <div class="well">
                         <div>
-                            <b>Price:</b><span data-bind="text: $data.price"></span>
+                            <b>Price:</b> $<span data-bind="text: $data.price"></span>
                         </div>
 
                         <div>
-                            <b>Description:</b><span data-bind="text: $data.description"></span>
+                            <b>Description:</b> <span data-bind="text: $data.description"></span>
                         </div>
                     </div>
                 </div>
