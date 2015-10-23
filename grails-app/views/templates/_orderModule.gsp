@@ -12,7 +12,6 @@
         </tr>
         </tbody>
     </table>
-
-    <div>Total:</div>
+    <div>Total: $<span data-bind="text: total"></span></div>
     <button class="btn btn-success send-order" data-bind="click: sendOrder">Send Order!</button>
 </div>

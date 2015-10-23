@@ -3,6 +3,13 @@ function UserViewModel() {
     var userViewModel = this;
 
     userViewModel.orders = ko.observableArray();
+    userViewModel.total = ko.computed(function() {
+        var total = 0;
+        for (var i = 0; i < userViewModel.orders().length; i++) {
+            total += userViewModel.orders()[i].price;
+        }
+        return total;
+    });
 
     userViewModel.add = function (e) {
         userViewModel.orders.push(e);
