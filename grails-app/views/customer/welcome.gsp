@@ -15,7 +15,7 @@
                                   [controller: 'customer', action: 'food', name: 'Food']]]"/>
     </div>
 
-    <div class="col-sm-9">
+    <div class="col-sm-8">
         <div class="row">
             <h1 class="text-center">Welcome to uServr</h1>
         </div>
@@ -31,11 +31,15 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-8">
                 <h1 class="page-header">Featured Items</h1>
                 <g:render template="/templates/menuItems"/>
             </div>
         </div>
+    </div>
+
+    <div class="col-md-1">
+        <g:link class="btn btn-success btn-sm send-order" controller="login" action="login">Admin</g:link>
     </div>
 </div>
 

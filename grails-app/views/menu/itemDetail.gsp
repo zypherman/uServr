@@ -13,5 +13,6 @@
     </div>
   </content>
 </g:applyLayout>
+<g:javascript src="user/userViewModel.js"/>
 </body>
 </html>

@@ -8,7 +8,7 @@ class CustomerController {
     MenuService menuService
 
     def index() {
-        render view: 'index'
+        render view: 'index', model: [menuItems: menuService.getAvailableDrinks()]
     }
 
     def drink() {
