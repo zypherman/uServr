@@ -15,7 +15,7 @@
                                   [controller: 'customer', action: 'food', name: 'Food']]]"/>
     </div>
 
-    <div class="col-sm-9">
+    <div class="col-sm-6">
         <div class="row">
             <h1 class="text-center">Welcome to uServr</h1>
         </div>
