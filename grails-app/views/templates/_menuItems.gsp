@@ -1,4 +1,4 @@
-<div class="row">
+<div class="menu">
     <g:each in="${menuItems}" var="item">
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <g:link controller="menu" action="itemDetail"

@@ -14,14 +14,15 @@
                 </ul>
 
                 <div class="footer">
-                    <g:if test="${session.customer}">
-                        <g:link class="btn logout" controller="login"
-                                action="logout">Logout</g:link>
-                    </g:if>
-                    <g:else test="!${session.customer}">
-                        <g:link class="btn logout" controller="login"
-                                action="login">Login</g:link>
-                    </g:else>
+                    %{--<g:if test="${session.customer}">--}%
+                        %{--<g:link class="btn logout" controller="login"--}%
+                                %{--action="logout">Logout</g:link>--}%
+                    %{--</g:if>--}%
+                    %{--<g:else test="!${session.customer}">--}%
+                        %{--<g:link class="btn logout" controller="login"--}%
+                                %{--action="login">Login</g:link>--}%
+                    %{--</g:else>--}%
+                    <div class="text-center">uServr</div>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
