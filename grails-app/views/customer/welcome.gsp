@@ -31,7 +31,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-8">
                 <h1 class="page-header">Featured Items</h1>
                 <g:render template="/templates/menuItems"/>
             </div>

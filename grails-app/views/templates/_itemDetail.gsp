@@ -9,5 +9,6 @@
         <div>${params?.description}</div>
         <h3>Item Price</h3>
         <div>${params?.price}</div>
+        <button class="btn btn-success send-order" data-bind="click: $parent.add">Add to Order</button>
     </div>
 </div>

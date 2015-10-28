@@ -1,5 +1,3 @@
-<div class="container-fluid">
-    <div class="row">
-        <div>uServr</div>
-    </div>
+<div class="row">
+    <g:render template="/templates/menuItems"/>
 </div>
