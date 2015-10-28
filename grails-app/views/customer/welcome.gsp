@@ -39,7 +39,7 @@
     </div>
 
     <div class="col-md-1">
-        <button class="btn btn-success btn-sm send-order">Admin</button>
+        <g:link class="btn btn-success btn-sm send-order" controller="login" action="login">Admin</g:link>
     </div>
 </div>
 
