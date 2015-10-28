@@ -16,8 +16,8 @@ function UserViewModel() {
         add(e);
     };
 
-    userViewModel.remove = function (e) {
-        userViewModel.orders.remove(e);
+    userViewModel.remove = function (e, d) {
+        userViewModel.orders.splice(d.currentTarget.id, 1);
         remove(e);
     };
 
