@@ -1,5 +1,7 @@
 package com.uservr.web
 
+import payment.Payment
+
 class Customer {
 
     Long id

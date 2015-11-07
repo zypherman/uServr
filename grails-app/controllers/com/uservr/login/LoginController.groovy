@@ -6,10 +6,15 @@ class LoginController {
 
     def index() {}
 
-    //Register customer
+    //Register customer view render
     def register() {
+        render view: 'register'
+    }
+
+    //Register the customer and redirect them to the next page
+    def doRegister() {
         Customer.findOrSaveWhere(username: params['username'], password: params['password'], name: params['username'])
-        forward(controller: 'login', action: 'login', params: params)
+        forward(controller: 'customer', action: 'index')
     }
 
     def login = {
