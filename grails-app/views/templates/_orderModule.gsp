@@ -13,5 +13,6 @@
         </tbody>
     </table>
     <div>Total: $<span data-bind="text: total"></span></div>
-    <button class="btn btn-success send-order" data-bind="click: sendOrder">Send Order!</button>
+    <button class="btn btn-success send-order" data-toggle="modal" data-target="#addPaymentModal">Send Order!</button>
+    <g:render template="/templates/addCreditCard"/>
 </div>
