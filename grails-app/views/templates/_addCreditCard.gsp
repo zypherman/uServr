@@ -30,6 +30,28 @@
                     <div class="panel-body">
                         <form role="form" id="payment-form">
                             <g:form action="addMethodOfPayment" method="put" id="payment-form"/>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="customerName"><strong>Customer Name</strong></label>
+
+                                        <div class="input-group">
+                                            <input
+                                                    type="tel"
+                                                    class="form-control"
+                                                    name="cardNumber"
+                                                    id="customerName"
+                                                    placeholder="Customer Name"
+                                                    autocomplete="cc-number"
+                                                    required autofocus/>
+                                            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="form-group">
@@ -107,17 +129,3 @@
 
     </div>
 </div>
-
-
-
-
-%{--<div class="container">--}%
-%{--<div class="row">--}%
-%{--<!-- You can make it whatever width you want. I'm making it full width--}%
-%{--on <= small devices and 4/12 page width on >= medium devices -->--}%
-%{--<div class="col-xs-12 col-md-4">--}%
-
-%{--</div>--}%
-
-%{--</div>--}%
-%{--</div>--}%

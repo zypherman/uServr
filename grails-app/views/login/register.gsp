@@ -23,7 +23,7 @@
                             </td>
                             <td valign='top' style='text-align:left;' width='80%'>
                                 <input id="username" type='text' class='form-control' name='username'
-                                       value='${customer?.username}' placeholder="Username" required autofocus/>
+                                       value='${user?.username}' placeholder="Username" required autofocus/>
                             </td>
                         </tr>
 
