@@ -2,10 +2,12 @@ package com.uservr.customer
 
 import grails.converters.JSON
 import menu.MenuService
+import payment.PaymentService
 
 class CustomerController {
 
     MenuService menuService
+    PaymentService paymentService
 
     def index() {
         render view: 'index', model: [menuItems: menuService.getAvailableDrinks()]
@@ -33,10 +35,17 @@ class CustomerController {
     }
 
     def sendOrder() {
+       // paymentService.processPayment(session?.customer)
         render menuService.sendOrder(request.JSON.order)
     }
 
     def welcome() {
         render view: 'welcome', model: [menuItems: menuService.getAvailableDrinks()]
     }
+
+    //Tie method of payment to their account
+    def addMethodOfPayment() {
+
+    }
+
 }

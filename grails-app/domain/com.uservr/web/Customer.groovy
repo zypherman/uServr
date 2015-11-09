@@ -4,19 +4,16 @@ class Customer {
 
     Long id
     Long version
-
     String name
-
-    String username
-    String password
+    String pin
 
     String toString() {
-        "$username"
+        "$name"
     }
 
     static constraints = {
-        username blank: false
-        password blank: false
+        name blank: false
+        pin blank: false
     }
 
 }

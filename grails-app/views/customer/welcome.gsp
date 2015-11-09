@@ -15,18 +15,15 @@
                                   [controller: 'customer', action: 'food', name: 'Food']]]"/>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm-8">
         <div class="row">
             <h1 class="text-center">Welcome to uServr</h1>
         </div>
 
         <div class="row">
             <div class="col-lg-12">
-                <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+                <p>Welcome to uServr! Feel free to take a look at our menu right away or our featured menu items!</p>
+                <p>When you are ready to order add the items to your order and click send order!</p>
             </div>
         </div>
 
@@ -36,6 +33,10 @@
                 <g:render template="/templates/menuItems"/>
             </div>
         </div>
+    </div>
+
+    <div class="col-md-1">
+        <g:link class="btn btn-success btn-sm send-order" controller="login" action="login">Admin</g:link>
     </div>
 </div>
 
