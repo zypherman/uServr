@@ -10,6 +10,7 @@
 //= require_self
 //= require knockout
 //= require bootstrap.min
+//= require cardvalidation
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {

@@ -10,10 +10,12 @@
     <div class="col-sm-6">
         <g:pageProperty name="page.details"/>
         <g:pageProperty name="page.templates"/>
+        %{--<g:render template="/templates/addCreditCard"/>--}%
     </div>
 
     <div class="col-sm-3">
         <g:render template="/templates/orderModule"/>
+        <g:render template="/templates/registerCustomer"/>
     </div>
 </div>
 

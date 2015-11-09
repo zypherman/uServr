@@ -1,5 +1,6 @@
 .send-order {
     width: 100%;
+    margin-top: 20px;
 }
 
 .glyphicon-remove {
@@ -10,7 +11,3 @@
     color: #000000;
     font-size: medium;
 }
-
-/*.well{*/
-    /*background-color: rgba(43, 231, 255, 0.40); // I don't know the .well color, so I used white as example*/
-/*}*/
