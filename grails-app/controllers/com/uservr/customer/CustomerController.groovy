@@ -1,5 +1,4 @@
 package com.uservr.customer
-
 import grails.converters.JSON
 import menu.MenuService
 import payment.PaymentService
@@ -38,6 +37,10 @@ class CustomerController {
     def sendOrder() {
        // paymentService.processPayment(session?.customer)
         render menuService.sendOrder(request.JSON.order)
+    }
+
+    def registerCustomer() {
+        redirect view: 'index', model: [menuItems: menuService.getAvailableDrinks()]
     }
 
     def welcome() {
