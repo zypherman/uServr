@@ -1,41 +1,41 @@
-function OrderViewModel() {
-    var orderViewModel = this;
+function KitchenOrderViewModel() {
+    var kitchenOrderViewModel = this;
 
-    orderViewModel.orders = ko.observableArray();
+    kitchenOrderViewModel.orders = ko.observableArray();
 
-    var event = new EventSource('/bar/order');
+    var kitchenEvent = new EventSource('/kitchen/order');
 
-    event.onmessage = function(event) {
+    kitchenEvent.onmessage = function(event) {
         if (event.data.length > 2) {
             var orders = JSON.parse(event.data);
             for (var i = 0; i < orders.length; i++) {
-                orderViewModel.orders.push(orders[i]);
+                kitchenOrderViewModel.orders.push(orders[i]);
             }
         }
     };
 
-    orderViewModel.delete = function(e, d) {
-        orderViewModel.orders.remove(e);
-        processOrder(e);
+    kitchenOrderViewModel.delete = function(e, d) {
+        kitchenOrderViewModel.orders.remove(e);
+        processKitchenOrder(e);
     };
 
-    getCurrentOrders();
+    getCurrentKitchenOrders();
 
-    function getCurrentOrders() {
+    function getCurrentKitchenOrders() {
         $.ajax({
-            url: '/bar/getCurrentOrders'
+            url: '/kitchen/getCurrentOrders'
         }).done(function(data) {
             if (data.length > 0) {
-                orderViewModel.orders(data);
+                kitchenOrderViewModel.orders(data);
             }
         }).fail(function(data) {
             console.log('fail ' + data);
         })
     }
 
-    function processOrder(order) {
+    function processKitchenOrder(order) {
         $.ajax({
-            url: '/bar/processOrder',
+            url: '/kitchen/processOrder',
             method: 'POST',
             dataType: 'json',
             contentType: 'application/json',
@@ -83,7 +83,7 @@ function OrderViewModel() {
         template: '<h4><span data-bind="text: timer, attr: {class: timerClass}"></span></h4>'
     });
 
-    ko.applyBindings(orderViewModel, $('.table')[0]);
-
+    ko.applyBindings(kitchenOrderViewModel, $('.table')[0]);
 }
-new OrderViewModel();
+
+new KitchenOrderViewModel();

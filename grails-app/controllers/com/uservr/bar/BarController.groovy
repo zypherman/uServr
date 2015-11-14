@@ -29,10 +29,6 @@ class BarController {
         writer.flush();
     }
 
-    def newOrder() {
-        render(barService.newOrder(request.JSON.name))
-    }
-
     def getCurrentOrders() {
         render JSON.use('deep') { raw(barService.getCurrentOrders() as JSON) }
     }

@@ -19,7 +19,8 @@ class CustomerController {
     }
 
     def food() {
-        render view: 'index'
+        def foodViewModel = menuService.getAvailableFood();
+        render view: 'food', model: [foodViewModel: JSON.use('deep') { raw(foodViewModel as JSON) }]
     }
 
     def addItem() {

@@ -61,20 +61,6 @@ function UserViewModel() {
         })
     }
 
-    $('.order').click(function () {
-        var name = $('#name');
-        var value = {name: name.val()};
-        name.val('');
-        $.ajax({
-            url: '/bar/newOrder',
-            method: 'POST',
-            dataType: 'json',
-            contentType: 'application/json',
-            data: JSON.stringify(value)
-        });
-
-    });
-
     ko.applyBindings(userViewModel);
 }
 new UserViewModel();

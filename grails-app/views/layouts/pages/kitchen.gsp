@@ -7,9 +7,8 @@
 
     <div class="col-sm-9">
         <g:pageProperty name="page.details"/>
+        <g:pageProperty name="page.templates"/>
     </div>
 </div>
-
-<g:pageProperty name="page.templates"/>
 
 <g:pageProperty name="page.scripts"/>
