@@ -1,6 +1,7 @@
 package menu
 
 import bar.BarService
+import kitchen.KitchenService
 import org.codehaus.groovy.grails.web.json.JSONArray
 import org.codehaus.groovy.grails.web.json.JSONObject
 
@@ -9,6 +10,7 @@ import java.util.concurrent.ConcurrentLinkedQueue
 class MenuService {
 
     BarService barService
+    KitchenService kitchenService
 
     ConcurrentLinkedQueue userOrder = new ConcurrentLinkedQueue()
 
@@ -20,6 +22,12 @@ class MenuService {
 //         new DrinkDTO(name: 'Wine', description: 'Red & White', price: 3.00),
 //         new DrinkDTO(name: 'Soda', description: 'Pop', price: 1.00),
 //         new DrinkDTO(name: 'Moonshine', description: 'Shine', price: 10.00)]
+    }
+    def getAvailableFood() {
+        [new FoodDTO(name: 'Burger', description: 'Beef', price: 2.00),
+         new FoodDTO(name: 'Cheeseburger', description: 'Cheesy', price: 3.00),
+         new FoodDTO(name: 'Ribeye', description: 'Steak', price: 8.00),
+         new FoodDTO(name: 'Porterhouse', description: 'Big Steak', price: 10.00)]
     }
 
     def addItem(JSONObject item) {
@@ -36,6 +44,7 @@ class MenuService {
 
     def sendOrder(JSONArray orders) {
         barService.newOrders(orders)
+        kitchenService.newOrders(orders)
         userOrder.removeAll(userOrder)
     }
 }

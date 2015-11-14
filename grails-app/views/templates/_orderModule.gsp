@@ -13,5 +13,5 @@
         </tbody>
     </table>
     <div>Total: $<span data-bind="text: total"></span></div>
-    <button class="btn btn-success send-order" data-toggle="modal" data-target="#registerCustomerModal">Send Order!</button>
+    <button class="btn btn-success send-order" data-bind="click: sendOrder">Send Order!</button>
 </div>

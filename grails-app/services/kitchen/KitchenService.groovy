@@ -1,11 +1,11 @@
-package bar
+package kitchen
 import groovy.transform.Synchronized
 import org.codehaus.groovy.grails.web.json.JSONArray
 import org.codehaus.groovy.grails.web.json.JSONObject
 
 import java.util.concurrent.ConcurrentLinkedQueue
 
-class BarService {
+class KitchenService {
 
     ConcurrentLinkedQueue newOrders = new ConcurrentLinkedQueue()
     ConcurrentLinkedQueue currentOrders = new ConcurrentLinkedQueue()
@@ -13,7 +13,7 @@ class BarService {
     def newOrders(JSONArray orders) {
         for (int i = 0; i < orders.length(); i++) {
             def order = orders[i]
-            if (order.type == 'drink') {
+            if (order.type == 'food') {
                 newOrders.add(order)
                 currentOrders.add(order)
             }
@@ -37,5 +37,4 @@ class BarService {
     def processOrder(JSONObject order) {
         currentOrders.remove(order);
     }
-
 }

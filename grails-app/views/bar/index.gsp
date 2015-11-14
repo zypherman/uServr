@@ -14,7 +14,7 @@
         <g:render template="/templates/orders"/>
     </content>
     <content tag="scripts">
-        <g:javascript src="orders/orders.js"/>
+        <g:javascript src="orders/barOrders.js"/>
     </content>
 </g:applyLayout>
 </body>

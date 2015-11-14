@@ -16,16 +16,6 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
-                <a class="btn btn-primary" href="/customer/drink.gsp">Drink</a>
-            </div>
-
-            <div class="col-sm-6">
-                <a class="btn btn-primary" href="/customer/food.gsp">Food</a>
-            </div>
-        </div>
-
-        <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Featured Items</h1>
                 <g:render template="/templates/menuItems"/>
