@@ -86,6 +86,7 @@ function UserViewModel() {
             $('#registerCustomerModal').modal('hide');
             $('.step1').removeClass('step3');
             $('.form-three').hide();
+            $('.form-one').show();
             $('#bar-three').hide();
             $('#bar-two').hide();
             $('#next').text('Next');
