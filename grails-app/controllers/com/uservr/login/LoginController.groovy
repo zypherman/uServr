@@ -70,6 +70,6 @@ class LoginController {
      */
     def logout = {
         session.invalidate()
-        redirect(action: 'login')
+        redirect(controller: 'customer', action: 'index')
     }
 }
