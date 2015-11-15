@@ -1,5 +1,4 @@
 package menu
-
 import bar.BarService
 import kitchen.KitchenService
 import org.codehaus.groovy.grails.web.json.JSONArray
@@ -42,9 +41,25 @@ class MenuService {
         userOrder
     }
 
-    def sendOrder(JSONArray orders) {
-        barService.newOrders(orders)
-        kitchenService.newOrders(orders)
+    def sendOrder(JSONArray orders, int tableNumber) {
+        JSONArray barOrders = new JSONArray()
+        JSONArray kitchenOrders = new JSONArray()
+
+        for (int i = 0; i < orders.length(); i++) {
+            def order = orders[i]
+            if (order.type == 'drink') {
+                barOrders.add(order)
+            } else {
+                kitchenOrders.add(order)
+            }
+        }
+
+        if (barOrders.length()) {
+            barService.newOrders(new Order(tableNumber: tableNumber, orders: barOrders))
+        }
+        if (kitchenOrders.length()) {
+            kitchenService.newOrders(new Order(tableNumber: tableNumber, orders: kitchenOrders))
+        }
         userOrder.removeAll(userOrder)
     }
 }

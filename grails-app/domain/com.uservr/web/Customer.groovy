@@ -2,7 +2,7 @@ package com.uservr.web
 
 class Customer {
 
-    Long id
+    int id
     Long version
     String name
     String pin

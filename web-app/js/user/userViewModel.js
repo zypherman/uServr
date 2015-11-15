@@ -80,8 +80,15 @@ function UserViewModel() {
             $('#bar-three').show();
             $('#next').text('Submit');
         } else if ($('.step3').length) {
-            $('.new-customer').submit();
-            userViewModel.sendOrder();
+            registerUser().done(function() {
+                userViewModel.sendOrder();
+            });
+            $('#registerCustomerModal').modal('hide');
+            $('.step1').removeClass('step3');
+            $('.form-three').hide();
+            $('#bar-three').hide();
+            $('#bar-two').hide();
+            $('#next').text('Next');
         } else {
             $('.step1').addClass('step2');
             $('.form-one').hide();
@@ -94,6 +101,14 @@ function UserViewModel() {
     $('#registerCustomerModal').on('hidden.bs.modal', function () {
         $('.new-customer')[0].reset();
     });
+
+    function registerUser() {
+        return $.ajax({
+            url: '/customer/registerCustomer',
+            data: $('.new-customer').serialize(),
+            method: 'POST'
+        });
+    }
 
     function validatePin() {
         var element = $('#pin-group');

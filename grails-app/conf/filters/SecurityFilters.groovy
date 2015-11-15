@@ -6,10 +6,10 @@ class SecurityFilters {
         loginCheck(controller: '*', action: '*') {
             before = {
                 //turn off authentication
-                session.customer = "bob"
+                session.admin = "bob"
                 session.name = "Bob Buttlicker"
 
-                if (!session.customer && (!controllerName.equals('login'))) {
+                if (!session.admin && (!controllerName.equals('login'))) {
                     redirect(controller: 'login', action: 'login')
                     return false
                 }

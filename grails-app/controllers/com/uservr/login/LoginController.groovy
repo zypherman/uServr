@@ -22,8 +22,8 @@ class LoginController {
      * TODO figure that out
      */
     def registerCustomer() {
-        session["customer"] = loginService.registerCustomer(params)
-        session["name"] = session?.customer?.name
+        session["admin"] = loginService.registerCustomer(params)
+        session["name"] = session?.admin?.name
         forward(controller: 'customer', action: 'index')
         //Add Payment to their account
         //Once they pay final bill everything is wiped away
