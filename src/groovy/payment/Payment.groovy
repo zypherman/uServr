@@ -2,7 +2,7 @@ package payment
 
 import java.time.LocalDate
 
-class Payment {
+class Payment implements Serializable {
 
     long cardNumber
     String type

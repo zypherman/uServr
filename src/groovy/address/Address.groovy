@@ -1,6 +1,6 @@
 package address
 
-class Address {
+class Address implements Serializable {
     String street
     String city
     String state
