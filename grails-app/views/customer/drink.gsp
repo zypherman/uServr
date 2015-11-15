@@ -26,12 +26,17 @@
                             </div>
                         </td>
                         <td>
-                            <div class="bar-buttons">
-                                <button class="btn btn-info"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-bind="attr: {'data-target': '#' + $index()}">info</button>
-                                <a class="btn btn-success" data-bind="click: $parent.add">Add</a>
+                            <div class="row bar-buttons">
+                                <div class="col-xs-6">
+                                    <button class="btn btn-info"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-bind="attr: {'data-target': '#' + $index()}">info</button>
+                                </div>
+
+                                <div class="col-xs-6">
+                                    <a class="btn btn-success" data-bind="click: $parent.add">Add</a>
+                                </div>
                             </div>
                         </td>
                     </tr>

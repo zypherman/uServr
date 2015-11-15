@@ -18,7 +18,8 @@ class CustomerService {
         def customer = session.getAttribute('customer')
         CustomerDTO customerDTO = new CustomerDTO()
         if (customer){
-            customerDTO.name = customer.name
+            customerDTO.firstName = customer.firstName
+            customerDTO.fullName = customer.fullName
             customerDTO.id = customer.id
             customerDTO.pin = customer.pin
             customerDTO.address = customer.address
@@ -39,8 +40,10 @@ class CustomerService {
                 expirationDate: getDate(registerCustomerCommand.exp),
                 cvv: getCvv(registerCustomerCommand.cvv)
         )
+        def first = registerCustomerCommand.name.split(' ')[0]
         CustomerDTO customer = new CustomerDTO(
-                name: registerCustomerCommand.name,
+                firstName: first,
+                fullName: registerCustomerCommand.name,
                 id: getId(),
                 pin: registerCustomerCommand.pin,
                 address: address,

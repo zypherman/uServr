@@ -8,6 +8,14 @@
     transition: all 0.5s ease;
 }
 
+.nav-ul {
+    display: inline-flex;
+}
+
+.cust-name {
+    text-align: center;
+}
+
 #wrapper.toggled {
     padding-left: 250px;
 }
@@ -100,6 +108,10 @@
 }
 
 @media (min-width: 768px) {
+    .navbar-fixed-top {
+        display: none;
+    }
+
     #wrapper {
         padding-left: 250px;
     }
@@ -109,7 +121,7 @@
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 200px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -124,5 +136,11 @@
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 70px;
     }
 }
