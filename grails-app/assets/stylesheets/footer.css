@@ -8,3 +8,13 @@
     bottom: 0;
     text-align: center;
 }
+
+.mobile-footer {
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    height: 200px;
+}

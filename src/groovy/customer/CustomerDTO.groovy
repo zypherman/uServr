@@ -6,7 +6,8 @@ import payment.Payment
 class CustomerDTO implements Serializable {
 
     int id
-    String name
+    String firstName
+    String fullName
     String pin
     Address address
     Payment payment
