@@ -54,7 +54,6 @@ class CustomerService {
         try {
             return LocalDate.parse(date)
         } catch(ignore) {
-            println('unable to parse exp')
             return LocalDate.now()
         }
     }
@@ -63,7 +62,6 @@ class CustomerService {
         try {
             return Integer.parseInt(cvv)
         } catch (ignore) {
-            println('unable to parse cvv')
             return 123
         }
     }
