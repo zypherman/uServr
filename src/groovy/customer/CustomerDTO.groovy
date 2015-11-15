@@ -3,7 +3,7 @@ package customer
 import address.Address
 import payment.Payment
 
-class CustomerDTO {
+class CustomerDTO implements Serializable {
 
     int id
     String name
