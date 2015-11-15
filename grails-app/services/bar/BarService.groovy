@@ -1,6 +1,6 @@
 package bar
 import groovy.transform.Synchronized
-import org.codehaus.groovy.grails.web.json.JSONArray
+import menu.Order
 import org.codehaus.groovy.grails.web.json.JSONObject
 
 import java.util.concurrent.ConcurrentLinkedQueue
@@ -10,14 +10,9 @@ class BarService {
     ConcurrentLinkedQueue newOrders = new ConcurrentLinkedQueue()
     ConcurrentLinkedQueue currentOrders = new ConcurrentLinkedQueue()
 
-    def newOrders(JSONArray orders) {
-        for (int i = 0; i < orders.length(); i++) {
-            def order = orders[i]
-            if (order.type == 'drink') {
-                newOrders.add(order)
-                currentOrders.add(order)
-            }
-        }
+    def newOrders(Order order) {
+        newOrders.add(order)
+        currentOrders.add(order)
     }
 
     @Synchronized
@@ -35,7 +30,7 @@ class BarService {
     }
 
     def processOrder(JSONObject order) {
-        currentOrders.remove(order);
+        currentOrders.remove(order as Order);
     }
 
 }

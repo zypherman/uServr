@@ -1,14 +1,11 @@
 package payment
 
-/**
- * Created by John on 11/7/15.
- */
+import java.time.LocalDate
+
 class Payment {
 
     long cardNumber
-    String cardHolderName
     String type
-    Date expirationDate
+    LocalDate expirationDate
     int cvv
-
 }

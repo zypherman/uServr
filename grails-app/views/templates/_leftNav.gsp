@@ -15,11 +15,11 @@
                 </ul>
 
                 <div class="footer">
-                    <g:if test="${session.customer}">
+                    <g:if test="${session.admin}">
                         <g:link class="btn logout" controller="login"
                                 action="logout">Logout</g:link>
                     </g:if>
-                    <g:else test="!${session.customer}">
+                    <g:else test="!${session.admin}">
                         <g:link class="btn logout" controller="login"
                                 action="login">Login</g:link>
                     </g:else>

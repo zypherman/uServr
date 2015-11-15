@@ -1,42 +1,33 @@
 <div class="table-responsive">
     <table class="table">
-        <thead>
-        <tr>
-            <th>
-                Name
-            </th>
-            <th></th>
-            <th></th>
-        </tr>
-        </thead>
         <tbody>
         <!-- ko foreach: orders -->
         <tr>
             <td>
-                <span data-bind="text: $data.name"></span>
-
-                <div class="collapse" data-bind="attr: {id: $index}">
-                    <div class="well">
-                        <div>
-                            <b>Price:</b> $<span data-bind="text: $data.price"></span>
-                        </div>
-
-                        <div>
-                            <b>Description:</b> <span data-bind="text: $data.description"></span>
-                        </div>
+                <div class="row">
+                    <div class="col-sm-1"><label for="tnum">Table Number:</label> <span id="tnum"
+                                                                                        data-bind="text: tableNumber"></span>
                     </div>
-                </div>
-            </td>
-            <td>
-                <timer></timer>
-            </td>
-            <td>
-                <div class="bar-buttons">
-                    <button class="btn btn-info"
-                            type="button"
-                            data-toggle="collapse"
-                            data-bind="attr: {'data-target': '#' + $index()}">info</button>
-                    <a class="btn btn-success" data-bind="click: $parent.delete">process</a>
+
+                    <div class="col-sm-2"><timer></timer></div>
+
+                    <div class="col-sm-7">
+                        <!-- ko foreach: orders -->
+                        <div class="row well">
+                            <div class="col-sm-6"><label><input type="checkbox"></label> <span id="name"
+                                                                                               data-bind="text: $data.name"></span>
+                            </div>
+
+                            <div class="col-sm-6"><label for="desc">Description:</label> <span id="desc"
+                                                                                               data-bind="text: $data.description"></span>
+                            </div>
+                        </div>
+                        <!-- /ko -->
+                    </div>
+
+                    <div class="col-sm-2">
+                        <a class="btn btn-block btn-success" data-bind="click: $parent.delete">process</a>
+                    </div>
                 </div>
             </td>
         </tr>
