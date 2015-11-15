@@ -30,6 +30,7 @@ function UserViewModel() {
             data: JSON.stringify({order: userViewModel.orders()})
         }).done(function () {
             userViewModel.orders.removeAll();
+            window.location = '/customer/index';
         })
     };
 
