@@ -16,6 +16,7 @@
     <div class="col-sm-3">
         <g:render template="/templates/orderModule"/>
         <g:render template="/templates/registerCustomer"/>
+        <g:render template="/templates/repeatCustomer"/>
     </div>
 </div>
 
