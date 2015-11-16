@@ -1,6 +1,7 @@
 package customer
 import address.Address
 import com.uservr.customer.RegisterCustomerCommand
+import com.uservr.customer.RepeatCustomerCommand
 import payment.Payment
 
 import javax.servlet.http.HttpSession
@@ -37,6 +38,7 @@ class CustomerService {
         )
         Payment payment = new Payment(
                 cardNumber: Long.parseLong(registerCustomerCommand.credit),
+                lastFour: getLastFour(registerCustomerCommand.credit),
                 expirationDate: getDate(registerCustomerCommand.expMonth, registerCustomerCommand.expYear),
                 cvv: getCvv(registerCustomerCommand.cvv)
         )
@@ -53,6 +55,10 @@ class CustomerService {
         true
     }
 
+    boolean validRepeat(RepeatCustomerCommand repeatCustomerCommand, CustomerDTO customerDTO) {
+        repeatCustomerCommand.lastFour == customerDTO.payment.lastFour && repeatCustomerCommand.repeatPin == customerDTO.pin
+    }
+
     LocalDate getDate(String month, String year) {
         try {
             return LocalDate.parse(year + '-' + month + '-01')
@@ -67,5 +73,9 @@ class CustomerService {
         } catch (ignore) {
             return 123
         }
+    }
+
+    String getLastFour(String number) {
+        number.substring(number.length() - 4)
     }
 }

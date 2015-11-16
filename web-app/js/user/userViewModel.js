@@ -37,6 +37,8 @@ function UserViewModel() {
         return userViewModel.pinValid() && userViewModel.pin2Valid();
     });
 
+    userViewModel.errorMessage = ko.observable();
+
     userViewModel.orders = ko.observableArray();
     userViewModel.total = ko.computed(function() {
         var total = 0;
@@ -68,6 +70,27 @@ function UserViewModel() {
             window.location = '/customer/index';
         })
     };
+
+    userViewModel.validateRepeat = function () {
+        userViewModel.errorMessage('');
+        $.ajax({
+            url: '/customer/repeatCustomer',
+            data: $('.repeat-customer').serialize(),
+            method: 'POST'
+        }).done(function(data) {
+            var d = JSON.parse(data);
+            if (d.message) {
+                userViewModel.errorMessage(d.message);
+            } else {
+                userViewModel.sendOrder();
+            }
+        })
+    };
+
+    $('#tmpl-repeat-customer').on('hidden.bs.modal', function () {
+        userViewModel.errorMessage('');
+        $('.repeat-customer')[0].reset();
+    });
 
     $('[data-toggle="tooltip"]').tooltip();
 
