@@ -37,7 +37,7 @@ class CustomerService {
         )
         Payment payment = new Payment(
                 cardNumber: Long.parseLong(registerCustomerCommand.credit),
-                expirationDate: getDate(registerCustomerCommand.exp),
+                expirationDate: getDate(registerCustomerCommand.expMonth, registerCustomerCommand.expYear),
                 cvv: getCvv(registerCustomerCommand.cvv)
         )
         def first = registerCustomerCommand.name.split(' ')[0]
@@ -53,9 +53,9 @@ class CustomerService {
         true
     }
 
-    LocalDate getDate(String date) {
+    LocalDate getDate(String month, String year) {
         try {
-            return LocalDate.parse(date)
+            return LocalDate.parse(year + '-' + month + '-01')
         } catch(ignore) {
             return LocalDate.now()
         }
