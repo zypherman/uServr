@@ -30,23 +30,32 @@
                                     Pin
                                 </div>
                             </div>
+                            <div class="text-right">
+                                All Fields Are Required.
+                            </div>
                         <g:form action="registerCustomer" method="post" class="form-signin form-horizontal new-customer">
                             <div class="form-one">
-                                <div class="form-group">
+                                <div class="form-group has-feedback" id="name-group">
                                     <label for='name' class="labelText">Full Name:</label>
-                                    <input id="name" type='text' class='form-control' name='name' placeholder="Full Name" required/>
+                                    <input id="name" type='text' class='form-control' name='name' placeholder="Full Name" data-bind="value: fullName"/>
+                                    <span id="name-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                    <span id="name-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group has-feedback" id="street-group">
                                     <label for="street">Street:</label>
-                                    <input id="street" type="text" class="form-control" name="street" placeholder="12345 Street" required>
+                                    <input id="street" type="text" class="form-control" name="street" placeholder="12345 Street" data-bind="value: street">
+                                    <span id="street-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                    <span id="street-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group has-feedback" id="city-group">
                                     <label for="city">City:</label>
-                                    <input id="city" type="text" class="form-control" name="city" placeholder="New City" required>
+                                    <input id="city" type="text" class="form-control" name="city" placeholder="New City" data-bind="value: city">
+                                    <span id="city-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                    <span id="city-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group has-feedback" id="state-group">
                                     <label for="state">State:</label>
-                                    <select class="form-control" id="state" name="state" required>
+                                    <select class="form-control" id="state" name="state" data-bind="value: state">
                                         <option value="">Select:</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
@@ -100,36 +109,52 @@
                                         <option value="WI">Wisconsin</option>
                                         <option value="WY">Wyoming</option>
                                     </select>
+                                    <span id="state-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                    <span id="state-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group has-feedback" id="zip-group">
                                     <label for="zip">Zip Code:</label>
-                                    <input id="zip" type="text" class="form-control" maxlength="5" name="zip" placeholder="ex. 55555" required>
+                                    <input id="zip" type="text" class="form-control" maxlength="5" name="zip" placeholder="ex. 55555" data-bind="value: zip">
+                                    <span id="zip-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                    <span id="zip-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>
                             </div>
                             <div class="form-two" style="display: none;">
-                                <div class="form-group">
+                                <div class="form-group has-feedback" id="credit-group">
                                     <label for="credit">Credit Card:</label>
-                                    <input id="credit" class="form-control" type="number" name="credit" placeholder="1111222233334444" required>
+                                    <input id="credit" class="form-control" type="text" maxlength="16" name="credit" placeholder="1111222233334444" data-bind="value: credit">
+                                    <span id="credit-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                    <span id="credit-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exp">Expiration:</label>
-                                    <input id="exp" class="form-control" type="number" name="exp" placeholder="ex. 12/2015" required>
+                                <div class="form-group has-feedback" id="expMonth-group">
+                                    <label for="expMonth">Expiration Month:</label>
+                                    <input id="expMonth" class="form-control" type="text" maxlength="2" name="expMonth" placeholder="ex. 02" data-bind="value: expMonth">
+                                    <span id="expMonth-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                    <span id="expMonth-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group has-feedback" id="expYear-group">
+                                    <label for="expYear">Expiration Year:</label>
+                                    <input id="expYear" class="form-control" type="text" maxlength="4" name="expYear" placeholder="ex. 2015" data-bind="value: expYear">
+                                    <span id="expYear-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                    <span id="expYear-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                </div>
+                                <div class="form-group has-feedback" id="cvv-group">
                                     <label for="cvv">CVV: <span class="glyphicon glyphicon-question-sign" data-placement="right" data-toggle="tooltip" title="3 or 4 digit security code on the back of your credit card."></span></label>
-                                    <input id="cvv" class="form-control" type="number" name="cvv" required>
+                                    <input id="cvv" class="form-control" type="text" maxlength="4" name="cvv" data-bind="value: cvv">
+                                    <span id="cvv-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
+                                    <span id="cvv-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>
                             </div>
                             <div class="form-three" style="display: none;">
                                 <div class="form-group has-feedback" id="pin-group">
                                     <label for='pin' class="labelText">Pin: <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="Enter a 4 digit pin. Remember this for placing additional orders."></span></label>
-                                    <input id="pin" type='password' name='pin' class="form-control" placeholder="ex. 1234" required maxlength="4"/>
+                                    <input id="pin" type='password' name='pin' class="form-control" placeholder="ex. 1234" maxlength="4" data-bind="value: pin"/>
                                     <span id="pin-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                     <span id="pin-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>
                                 <div class="form-group has-feedback" id="pin2-group">
                                     <label for='pin2' class="labelText">Confirm Pin:</label>
-                                    <input id="pin2" type='password' placeholder="Same as above" name='pin2' class="form-control" maxlength="4" required/>
+                                    <input id="pin2" type='password' placeholder="Same as above" name='pin2' class="form-control" maxlength="4" data-bind="value: pin2"/>
                                     <span id="pin2-success" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                     <span id="pin2-error" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span>
                                 </div>

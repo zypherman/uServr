@@ -66,7 +66,8 @@ class RegisterCustomerCommand {
     String state
     String zip
     String credit
-    String exp
+    String expMonth
+    String expYear
     String cvv
     String pin
     String pin2
