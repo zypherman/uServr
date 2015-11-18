@@ -5,8 +5,8 @@
     <div class="row">
         <g:each in="${featuredFood}" var="item">
             <div class="col-xs-3 thumb">
-                <g:link controller="menu" action="itemDetail"
-                        params="[name: item?.name, description: item?.description, price: item?.price]">
+                <g:link controller="customer" action="itemDetail"
+                        params="[name: item?.name]">
                     <label class="label">${item.name}</label>
                     <g:img class="menu-item-image img-responsive" dir="images" file="WaiterIcon.png"/>
                 </g:link>
@@ -20,8 +20,8 @@
     <div class="row">
         <g:each in="${featuredDrinks}" var="item">
             <div class="col-xs-3 thumb">
-                <g:link controller="menu" action="itemDetail"
-                        params="[name: item?.name, description: item?.description, price: item?.price]">
+                <g:link controller="customer" action="itemDetail"
+                        params="[name: item?.name]">
                     <label class="label">${item.name}</label>
                     <g:img class="menu-item-image img-responsive" dir="images" file="WaiterIcon.png"/>
                 </g:link>

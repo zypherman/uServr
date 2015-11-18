@@ -60,6 +60,24 @@ class MenuService {
          new FoodDTO(name: 'Porterhouse', description: 'Big Steak', price: 10.00)]
     }
 
+    MenuItem getFeaturedItem(String name) {
+        def food = getFeaturedFood()
+        def drink = getFeaturedDrinks()
+
+        for (int i = 0; i < food.size(); i++) {
+            if (food[i].name == name) {
+                return food[i]
+            }
+        }
+
+        for (int i = 0; i < drink.size(); i++) {
+            if (drink[i].name == name) {
+                return drink[i]
+            }
+        }
+
+    }
+
     def addItem(JSONObject item) {
         userOrder.add(item)
     }

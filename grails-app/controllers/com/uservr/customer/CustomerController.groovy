@@ -26,6 +26,11 @@ class CustomerController {
         render view: 'food', model: [foodViewModel: JSON.use('deep') { raw(foodViewModel as JSON) }]
     }
 
+    def itemDetail() {
+        def detail = menuService.getFeaturedItem(params.name)
+        render view: 'itemDetail', model: [detail: JSON.use('deep') { raw(detail as JSON) }]
+    }
+
     def addItem() {
         render menuService.addItem(request.JSON.order)
     }
