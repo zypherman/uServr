@@ -22,12 +22,8 @@ class CustomerController {
     }
 
     def food() {
-        def entrees = menuService.getAllEntrees()
-        def sides = menuService.getAllSides()
-        def desserts = menuService.getAllDesserts()
-        render view: 'food', model: [entrees: JSON.use('deep') { raw(entrees as JSON) },
-                                     sides: JSON.use('deep') { raw(sides as JSON) },
-                                     desserts: JSON.use('deep') { raw(desserts as JSON) }]
+        def foodViewModel = menuService.getAvailableFood()
+        render view: 'food', model: [foodViewModel: JSON.use('deep') { raw(foodViewModel as JSON) }]
     }
 
     def addItem() {
