@@ -11,7 +11,8 @@
 
         <div class="drink-table">
             <table class="table table-striped">
-                <tbody data-bind="foreach: ${entrees}">
+                <tbody data-bind="foreach: ${foodViewModel}">
+                <!-- ko if: cat == 'entree' -->
                 <tr>
                     <td>
                         <span data-bind="text: $data.name"></span>
@@ -46,6 +47,7 @@
                         </div>
                     </td>
                 </tr>
+                <!-- /ko -->
                 </tbody>
             </table>
         </div>
@@ -53,7 +55,8 @@
 
         <div class="drink-table">
             <table class="table table-striped">
-                <tbody data-bind="foreach: ${sides}">
+                <tbody data-bind="foreach: ${foodViewModel}">
+                <!-- ko if: cat == 'side' -->
                 <tr>
                     <td>
                         <span data-bind="text: $data.name"></span>
@@ -88,6 +91,7 @@
                         </div>
                     </td>
                 </tr>
+                <!-- /ko -->
                 </tbody>
             </table>
         </div>
@@ -95,7 +99,8 @@
 
         <div class="drink-table">
             <table class="table table-striped">
-                <tbody data-bind="foreach: ${desserts}">
+                <tbody data-bind="foreach: ${foodViewModel}">
+                <!-- ko if: cat == 'dessert' -->
                 <tr>
                     <td>
                         <span data-bind="text: $data.name"></span>
@@ -130,6 +135,7 @@
                         </div>
                     </td>
                 </tr>
+                <!-- /ko -->
                 </tbody>
             </table>
         </div>

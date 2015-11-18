@@ -49,29 +49,6 @@ class MenuService {
          new FoodDTO(name: 'Tiramisu', description: 'Flown in from Italy', price: 10.00, cat: 'dessert')]
     }
 
-    def getAllEntrees() {
-        [new FoodDTO(name: 'Hamburger', description: 'Angus Beef on Sesame Seed Bun', price: 10.00, options:['Pickles', 'Onions', 'Lettuce', 'Tomato', 'Ketchup', 'Mustard', 'Mayo'], cat: 'entree'),
-         new FoodDTO(name: 'Spaghetti & Meatballs', description: 'Angel Hair with Homemade Meatballs', price: 10.00, options:['Cheese'], cat: 'entree'),
-         new FoodDTO(name: 'Steak', description: '8 oz Ribeye Steak', price: 12.00, options:['Rare', 'Medium Rare', 'Medium', 'Medium Well', 'Well'], cat: 'entree'),
-         new FoodDTO(name: 'Pizza', description: 'Make a Custom Pizza', price: 15.00, options:['Cheese', 'Sausage', 'Canadian Bacon', 'Pepperoni', 'Olives', 'Peppers', 'Onion', 'Thin Crust', 'Chicago Style', 'Stuffed Crust'], cat: 'entree'),
-         new FoodDTO(name: 'Fried Rice', description: 'Make a Custom Fried Rice', price: 10.00, options:['Chicken', 'Steak', 'Pork', 'Tofu', 'Broccoli', 'Peas', 'Mini Corn', 'Peppers'], cat: 'entree'),
-         new FoodDTO(name: 'Chicken Wings', description: 'Deep Fried Chicken Wings', price: 8.00, options:['Barbecue', 'Buffalo', 'Classic', 'Ranch', 'Blue Cheese', 'Honey Mustard'], cat: 'entree')]
-    }
-
-    def getAllSides() {
-        [new FoodDTO(name: 'Fries', description: 'Your Choice of Fries', price: 4.00, options:['Small', 'Medium', 'Large'], cat: 'side'),
-         new FoodDTO(name: 'Vegetables', description: 'Your Choice of Cooked Vegetables', price: 3.00, options:['Broccoli', 'Cauliflower', 'Carrots', 'Green Beans'], cat: 'side'),
-         new FoodDTO(name: 'Fruit', description: 'Your Choice of Fresh Fruit', price: 5.00, options:['Strawberry', 'Blueberry', 'Pineapple', 'Apple', 'Cherry', 'Orange'], cat: 'side'),
-         new FoodDTO(name: 'Bread', description: 'Your Choice of Breads', price: 2.00, options:['Garlic Bread', 'Breadsticks', 'Rolls'], cat: 'side')]
-    }
-
-    def getAllDesserts() {
-        [new FoodDTO(name: 'Strawberry Cheesecake', description: 'Strawberries in Cheesecake', price: 8.00, cat: 'dessert'),
-         new FoodDTO(name: 'Giant Cookie', description: 'Chocolate Chip Cookie with Ice Cream', price: 6.00, cat: 'dessert'),
-         new FoodDTO(name: 'Tiramisu', description: 'Flown in from Italy', price: 10.00, cat: 'dessert')]
-    }
-
-
     def getFeaturedDrinks() {
         [new DrinkDTO(name: 'Red Wine', description: 'From the Hills of California', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar'),
          new DrinkDTO(name: 'White Wine', description: 'From an Italian Vineyard', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar'),
