@@ -59,7 +59,7 @@ class CustomerController {
     }
 
     def welcome() {
-        render view: 'welcome', model: [menuItems: menuService.getAvailableDrinks()]
+        render view: 'welcome', model: [featuredFood: menuService.getFeaturedFood(), featuredDrinks: menuService.getFeaturedDrinks()]
     }
 
     //Tie method of payment to their account
