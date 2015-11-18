@@ -7,5 +7,6 @@ trait MenuItem {
     String size
     String pour
     Double price
+    String cat
     abstract String type
 }
