@@ -15,18 +15,6 @@
                 <tr>
                     <td>
                         <span data-bind="text: $data.name"></span>
-
-                        <div class="collapse" data-bind="attr: {id: $index}">
-                            <div class="well">
-                                <div>
-                                    <b>Description:</b> <span data-bind="text: $data.description"></span>
-                                </div>
-
-                                <div>
-                                    <b>Price:</b> <span data-bind="text: $data.price"></span>
-                                </div>
-                            </div>
-                        </div>
                     </td>
                     <td>
                         <div class="row bar-buttons">
@@ -39,6 +27,21 @@
 
                             <div class="col-xs-6">
                                 <a class="btn btn-success" data-bind="click: $parent.add">Add</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="collapse" data-bind="attr: {id: $index}">
+                            <div class="well">
+                                <div>
+                                    <b>Description:</b> <span data-bind="text: $data.description"></span>
+                                </div>
+
+                                <div>
+                                    <b>Price:</b> <span data-bind="text: $data.price"></span>
+                                </div>
                             </div>
                         </div>
                     </td>
