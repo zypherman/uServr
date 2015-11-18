@@ -6,7 +6,4 @@ class MenuController {
 
     }
 
-    def itemDetail() {
-        render (view: 'itemDetail', model: [params: params])
-    }
 }

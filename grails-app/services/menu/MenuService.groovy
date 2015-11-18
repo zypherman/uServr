@@ -61,6 +61,24 @@ class MenuService {
          new FoodDTO(name: 'Spaghetti & Meatballs', description: 'Angel Hair with Homemade Meatballs', price: 10.00, options:['Cheese'], imgSrc: "SpaghettiMeatballs.jpg")]
     }
 
+    MenuItem getFeaturedItem(String name) {
+        def food = getFeaturedFood()
+        def drink = getFeaturedDrinks()
+
+        for (int i = 0; i < food.size(); i++) {
+            if (food[i].name == name) {
+                return food[i]
+            }
+        }
+
+        for (int i = 0; i < drink.size(); i++) {
+            if (drink[i].name == name) {
+                return drink[i]
+            }
+        }
+
+    }
+
     def addItem(JSONObject item) {
         userOrder.add(item)
     }
