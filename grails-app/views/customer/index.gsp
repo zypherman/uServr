@@ -7,19 +7,10 @@
 <body>
 <g:applyLayout name="pages/customer">
     <content tag="details">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">
-                    Customer Home Page
-                </h1>
-            </div>
-        </div>
+        <h1 class="text-center">Uservr</h1>
 
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Featured Items</h1>
-                <g:render template="/templates/menuItems"/>
-            </div>
+        <div>
+            <g:render template="/templates/menuItems"/>
         </div>
     </content>
 </g:applyLayout>
