@@ -5,11 +5,12 @@
         <tr>
             <td>
                 <div class="row">
-                    <div class="col-sm-1"><label for="tnum">Table Number:</label> <span id="tnum"
-                                                                                        data-bind="text: tableNumber"></span>
+                    <div class="col-sm-3">
+                        <span class="btn btn-default btn-sm">
+                        Table <span id="tnum" class="badge" data-bind="text: tableNumber">4</span>
+                        </span>
+                        <timer></timer>
                     </div>
-
-                    <div class="col-sm-2"><timer></timer></div>
 
                     <div class="col-sm-7">
                         <!-- ko foreach: orders -->
