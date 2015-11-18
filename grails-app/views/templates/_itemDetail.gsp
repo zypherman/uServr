@@ -1,7 +1,7 @@
 <div class="row" data-bind="with: ${detail}">
     <div class="col-xs-4">
         <h3 data-bind="text: name"></h3>
-        <g:img class="menu-item-image img-responsive" dir="images" file="WaiterIcon.png"/>
+        <g:img class="menu-item-detail-image img-responsive" dir="images" file="${imgSrc}"/>
         %{--<g:img class="menu-item-image img-responsive" dir="images" file="${item.name}.png"/>--}%
     </div>
     <div class="col-xs-4">

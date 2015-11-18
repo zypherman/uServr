@@ -24,6 +24,11 @@
     height: 75%;
 }
 
+.menu-item-detail-image {
+    width: 100%;
+    height: 75%;
+}
+
 @media (min-width: 768px) {
     .mobile-footer {
         display: none !important;
