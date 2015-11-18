@@ -8,5 +8,6 @@ trait MenuItem {
     String pour
     Double price
     String cat
+    String imgSrc
     abstract String type
 }

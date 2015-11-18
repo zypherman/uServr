@@ -8,7 +8,7 @@
                 <g:link controller="menu" action="itemDetail"
                         params="[name: item?.name, description: item?.description, price: item?.price]">
                     <label class="label">${item.name}</label>
-                    <g:img class="menu-item-image img-responsive" dir="images" file="WaiterIcon.png"/>
+                    <g:img class="menu-item-image img-responsive" dir="image" file="${item?.imgSrc}"/>
                 </g:link>
             </div>
         </g:each>
@@ -23,7 +23,7 @@
                 <g:link controller="menu" action="itemDetail"
                         params="[name: item?.name, description: item?.description, price: item?.price]">
                     <label class="label">${item.name}</label>
-                    <g:img class="menu-item-image img-responsive" dir="images" file="WaiterIcon.png"/>
+                    <g:img class="menu-item-image img-responsive" dir="images" file="${item?.imgSrc}"/>
                 </g:link>
             </div>
         </g:each>
