@@ -43,6 +43,10 @@ class CustomerController {
         render JSON.use('deep') { raw(menuService.getOrder() as JSON) }
     }
 
+    def startPage() {
+        render view: 'startPage'
+    }
+
     def sendOrder() {
        // paymentService.processPayment(session?.customer)
         CustomerDTO customerDTO = customerService.getCustomer(session)

@@ -30,7 +30,7 @@ class MenuService {
          new DrinkDTO(name: 'Rum and Coke', description: 'Jack Daniels and Coke', size: '6 oz', pour: 'Mixed Drink Glass', price: 4.00, cat: 'bar'),
          new DrinkDTO(name: 'Red Wine', description: 'From the Hills of California', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar'),
          new DrinkDTO(name: 'White Wine', description: 'From an Italian Vineyard', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar'),
-         new DrinkDTO(name: 'Martini', description: 'Shaken not Stirred', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar')]
+         new DrinkDTO(name: 'Martini', description: 'Shaken not Stirred', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar', imgSrc: "Martini.jpg")]
     }
     def getAvailableFood() {
 
