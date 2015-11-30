@@ -50,12 +50,12 @@ function UserViewModel() {
 
     userViewModel.add = function (e) {
         userViewModel.orders.push(e);
-        add(e);
+        //add(e);
     };
 
     userViewModel.remove = function (e, d) {
         userViewModel.orders.splice(d.currentTarget.id, 1);
-        remove(e);
+        //remove(e);
     };
 
     userViewModel.sendOrder = function () {
@@ -69,6 +69,15 @@ function UserViewModel() {
             userViewModel.orders.removeAll();
             window.location = '/customer/index';
         })
+    };
+
+    userViewModel.logout = function() {
+        userViewModel.orders.removeAll();
+        $.ajax({
+            url: '/login/logout'
+        }).done(function(){
+            window.location = '/customer/index';
+        });
     };
 
     userViewModel.validateRepeat = function () {

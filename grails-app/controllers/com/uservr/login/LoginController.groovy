@@ -68,8 +68,8 @@ class LoginController {
     /**
      * Remove any session data and then redirect us to the log in page
      */
-    def logout = {
+    def logout() {
         session.invalidate()
-        redirect(controller: 'customer', action: 'index')
+        render true
     }
 }
