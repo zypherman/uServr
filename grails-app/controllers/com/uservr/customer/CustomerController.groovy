@@ -25,7 +25,7 @@ class CustomerController {
     }
 
     def itemDetail() {
-        def detail = menuService.getFeaturedItem(params.name)
+        def detail = [detail:  menuService.getFeaturedItem(params.name)]
         render view: 'itemDetail', model: [detail: JSON.use('deep') { raw(detail as JSON) }]
     }
 
@@ -35,6 +35,10 @@ class CustomerController {
 
     def removeItem() {
         render menuService.removeItem(request.JSON.order)
+    }
+
+    def removeAllItems() {
+        render menuService.removeAllItems()
     }
 
     def getOrder() {

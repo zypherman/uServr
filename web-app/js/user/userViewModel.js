@@ -50,12 +50,17 @@ function UserViewModel() {
 
     userViewModel.add = function (e) {
         userViewModel.orders.push(e);
-        //add(e);
+        add(e);
+    };
+
+    userViewModel.addDetail = function (e) {
+        userViewModel.orders.push(e.detail);
+        add(e.detail);
     };
 
     userViewModel.remove = function (e, d) {
         userViewModel.orders.splice(d.currentTarget.id, 1);
-        //remove(e);
+        remove(e);
     };
 
     userViewModel.sendOrder = function () {
@@ -74,9 +79,13 @@ function UserViewModel() {
     userViewModel.logout = function() {
         userViewModel.orders.removeAll();
         $.ajax({
-            url: '/login/logout'
-        }).done(function(){
-            window.location = '/customer/index';
+           url: '/customer/removeAllItems'
+        }).done(function() {
+            $.ajax({
+                url: '/login/logout'
+            }).done(function(){
+                window.location = '/customer/index';
+            });
         });
     };
 
