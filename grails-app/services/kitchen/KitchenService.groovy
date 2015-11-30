@@ -10,6 +10,7 @@ class KitchenService {
 
     ConcurrentLinkedQueue newOrders = new ConcurrentLinkedQueue()
     ConcurrentLinkedQueue currentOrders = new ConcurrentLinkedQueue()
+    ConcurrentLinkedQueue kitchenHistory = new ConcurrentLinkedQueue()
 
     def newOrders(Order order) {
         newOrders.add(order)
@@ -31,6 +32,7 @@ class KitchenService {
     }
 
     def processOrder(JSONObject order) {
-        currentOrders.remove(order as Order);
+        currentOrders.remove(order as Order)
+        kitchenHistory.add(order as Order)
     }
 }

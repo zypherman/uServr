@@ -10,7 +10,6 @@
     <div class="col-sm-6">
         <g:pageProperty name="page.details"/>
         <g:pageProperty name="page.templates"/>
-        %{--<g:render template="/templates/addCreditCard"/>--}%
     </div>
 
     <div class="col-sm-3">

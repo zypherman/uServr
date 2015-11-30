@@ -1,0 +1,17 @@
+.edit-form {
+    max-width: 75%;
+    margin-top: 20px;
+}
+
+.edit-top {
+    margin-top: 70px;
+}
+
+.manager-table {
+    overflow-x: scroll;
+    max-height: 300px;
+}
+
+.form-buttons {
+    float: right;
+}
