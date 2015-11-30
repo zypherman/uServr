@@ -32,7 +32,7 @@ class MenuService {
             new DrinkDTO(name: 'Martini', description: 'Shaken not Stirred', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar', imgSrc: "Martini.jpg")))
 
     ArrayList food = new ArrayList<FoodDTO>(Arrays.asList(
-            new FoodDTO(name: 'Ribeye', description: 'Steak', price: 8.00, imgSrc: "Ribeye.jpg"),
+            new FoodDTO(name: 'Ribeye', description: 'Steak', price: 8.00, imgSrc: "meat-cooked.jpg"),
             new FoodDTO(name: 'Porterhouse', description: 'Big Steak', price: 10.00, imgSrc: "Ribeye.jpg"),
             new FoodDTO(name: 'Hamburger', description: 'Angus Beef on Sesame Seed Bun', price: 10.00, options: ['Pickles', 'Onions', 'Lettuce', 'Tomato', 'Ketchup', 'Mustard', 'Mayo'], cat: 'entree'),
             new FoodDTO(name: 'Spaghetti & Meatballs', description: 'Angel Hair with Homemade Meatballs', price: 10.00, options: ['Cheese'], cat: 'entree'),
@@ -50,11 +50,11 @@ class MenuService {
 
     ArrayList featuredDrinks = new ArrayList<DrinkDTO>(Arrays.asList(
             new DrinkDTO(name: 'Red Wine', description: 'From the Hills of California', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar', imgSrc: "RedWine.jpg"),
-            new DrinkDTO(name: 'White Wine', description: 'From an Italian Vineyard', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar', imgSrc: "RedWine.jpg"),
+            new DrinkDTO(name: 'White Wine', description: 'From an Italian Vineyard', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar', imgSrc: "WhiteWine.jpg"),
             new DrinkDTO(name: 'Martini', description: 'Shaken not Stirred', size: '6 oz', pour: 'Wine Glass', price: 5.00, cat: 'bar', imgSrc: "Martini.jpg")))
 
     ArrayList featuredFood = new ArrayList<FoodDTO>(Arrays.asList(
-            new FoodDTO(name: 'Ribeye', description: 'Steak', price: 8.00, imgSrc: "Ribeye.jpg"),
+            new FoodDTO(name: 'Ribeye', description: 'Steak', price: 8.00, imgSrc: "meat-cooked.jpg"),
             new FoodDTO(name: 'Porterhouse', description: 'Big Steak', price: 10.00, imgSrc: "Ribeye.jpg"),
             new FoodDTO(name: 'Spaghetti & Meatballs', description: 'Angel Hair with Homemade Meatballs', price: 10.00, options: ['Cheese'], imgSrc: "SpaghettiMeatballs.jpg")))
 
@@ -82,6 +82,13 @@ class MenuService {
 
     def removeItem(JSONObject item) {
         userOrder.remove(item)
+    }
+
+    def removeAllItems() {
+        if (userOrder) {
+            userOrder.removeAll(userOrder)
+        }
+        return true
     }
 
     def getOrder() {
