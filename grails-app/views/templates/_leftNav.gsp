@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-xs-4">
                 <div class="navbar-header">
-                    <g:if test="${session?.customer}">
+                    <g:if test="${session?.customer  && request.requestURI.contains('customer')}">
                         <div class="navbar-brand">${session?.customer?.firstName}'s Dash</div>
                     </g:if>
                     <g:else>
