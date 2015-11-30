@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}">
     <asset:stylesheet src="application.css"/>
+    <asset:stylesheet src="startPage.css"/>
     <asset:javascript src="application.js"/>
 </head>
 
@@ -27,7 +28,7 @@
                 <g:link type="button" class="btn btn-xl btn-lg" controller="customer" action="index">Customer</g:link>
                 <g:link type="button" class="btn btn-xl btn-lg" controller="kitchen" action="index">Kitchen</g:link>
                 <g:link type="button" class="btn btn-xl btn-lg" controller="bar" action="index">Bar</g:link>
-                <g:link type="button" class="btn btn-xl btn-lg">Manager</g:link>
+                <g:link type="button" class="btn btn-xl btn-lg" controller="manager" action="index">Manager</g:link>
             </div>
         </div>
     </div>

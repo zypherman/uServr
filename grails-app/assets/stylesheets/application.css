@@ -17,7 +17,7 @@
 *= require leftnav
 *= require orders
 *= require addCreditCard
-*= require startPage
+*= require manager
 */
 
 .menu-item-image {

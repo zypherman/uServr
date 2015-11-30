@@ -2,7 +2,8 @@
     <div class="col-sm-3">
         <g:render template="/templates/leftNav"
                   model="[name : 'Manager Dash',
-                          links: [[controller: 'manager', action: 'index', name: 'Manager Home']]]"/>
+                          links: [[controller: 'manager', action: 'index', name: 'Manager Home'],
+                                  [controller: 'manager', action: 'edit', name: 'Edit Menu']]]"/>
     </div>
 
     <div class="col-sm-9">
@@ -12,3 +13,5 @@
 </div>
 
 <g:pageProperty name="page.scripts"/>
+
+<g:javascript src="manager/managerViewModel.js"/>

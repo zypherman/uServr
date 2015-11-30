@@ -12,7 +12,7 @@
         <div class="drink-table">
             <table class="table table-striped">
                 <tbody data-bind="foreach: ${drinkViewModel}">
-                <!-- ko if: cat -->
+                <!-- ko if: cat == 'bar' -->
                 <tr>
                     <td>
                         <span data-bind="text: $data.name"></span>
@@ -65,7 +65,7 @@
         <div class="drink-table">
             <table class="table table-striped">
                 <tbody data-bind="foreach: ${drinkViewModel}">
-                <!-- ko ifnot: cat -->
+                <!-- ko if: cat == 'non-alcohol' -->
                 <tr>
                     <td>
                         <span data-bind="text: $data.name"></span>

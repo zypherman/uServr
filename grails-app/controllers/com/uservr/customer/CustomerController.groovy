@@ -4,25 +4,23 @@ import customer.CustomerService
 import grails.converters.JSON
 import groovy.json.JsonOutput
 import menu.MenuService
-import payment.PaymentService
 
 class CustomerController {
 
     MenuService menuService
     CustomerService customerService
-    PaymentService paymentService
 
     def index() {
-        render view: 'index', model: [featuredFood: menuService.getFeaturedFood(), featuredDrinks: menuService.getFeaturedDrinks()]
+        render view: 'index', model: [featuredFood: menuService.featuredFood, featuredDrinks: menuService.featuredDrinks]
     }
 
     def drink() {
-        def drinkViewModel = menuService.getAvailableDrinks();
+        def drinkViewModel = menuService.drinks
         render view: 'drink', model: [drinkViewModel: JSON.use('deep') { raw(drinkViewModel as JSON) }]
     }
 
     def food() {
-        def foodViewModel = menuService.getAvailableFood()
+        def foodViewModel = menuService.food
         render view: 'food', model: [foodViewModel: JSON.use('deep') { raw(foodViewModel as JSON) }]
     }
 
@@ -48,7 +46,6 @@ class CustomerController {
     }
 
     def sendOrder() {
-       // paymentService.processPayment(session?.customer)
         CustomerDTO customerDTO = customerService.getCustomer(session)
         render menuService.sendOrder(request.JSON.order, customerDTO.id)
     }
@@ -68,7 +65,7 @@ class CustomerController {
     }
 
     def welcome() {
-        render view: 'welcome', model: [featuredFood: menuService.getFeaturedFood(), featuredDrinks: menuService.getFeaturedDrinks()]
+        render view: 'welcome', model: [featuredFood: menuService.featuredFood, featuredDrinks: menuService.featuredDrinks]
     }
 
     //Tie method of payment to their account

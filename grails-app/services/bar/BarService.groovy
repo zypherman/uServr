@@ -9,6 +9,7 @@ class BarService {
 
     ConcurrentLinkedQueue newOrders = new ConcurrentLinkedQueue()
     ConcurrentLinkedQueue currentOrders = new ConcurrentLinkedQueue()
+    ConcurrentLinkedQueue barHistory = new ConcurrentLinkedQueue()
 
     def newOrders(Order order) {
         newOrders.add(order)
@@ -30,7 +31,8 @@ class BarService {
     }
 
     def processOrder(JSONObject order) {
-        currentOrders.remove(order as Order);
+        currentOrders.remove(order as Order)
+        barHistory.add(order as Order)
     }
 
 }
