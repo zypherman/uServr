@@ -1,7 +1,7 @@
 <div id="wrapper">
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
-        <g:if test="${session?.customer}">
+        <g:if test="${session?.customer && request.requestURI.contains('customer')}">
             <h3 class="cust-name">${session?.customer?.firstName}'s Dash</h3>
         </g:if>
         <g:else>
