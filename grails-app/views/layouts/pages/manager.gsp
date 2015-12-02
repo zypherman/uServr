@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-sm-3">
         <g:render template="/templates/leftNav"
-                  model="[name : 'Manager Dash',
-                          links: [[controller: 'manager', action: 'index', name: 'Manager Home'],
-                                  [controller: 'manager', action: 'edit', name: 'Edit Menu']]]"/>
+                  model="[name : message(code: 'mDash'),
+                          links: [[controller: 'manager', action: 'index', name: message(code: 'mHome')],
+                                  [controller: 'manager', action: 'edit', name: message(code: 'editMenu')]]]"/>
     </div>
 
     <div class="col-sm-9">

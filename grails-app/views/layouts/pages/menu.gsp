@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col-sm-3">
         <g:render template="/templates/leftNav"
-                  model="[name : 'Your Dash',
-                          links: [[controller: 'customer', action: 'index', name: 'Customer Home'],
-                                  [controller: 'customer', action: 'drink', name: 'Drink'],
-                                  [controller: 'customer', action: 'food', name: 'Food']]]"/>
+                  model="[name : message(code: 'your'),
+                          links: [[controller: 'customer', action: 'index', name: message(code: 'cHome')],
+                                  [controller: 'customer', action: 'drink', name: message(code: 'drink')],
+                                  [controller: 'customer', action: 'food', name: message(code: 'food')]]]"/>
     </div>
 
     <div class="col-sm-6">
