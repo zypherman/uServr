@@ -23,7 +23,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="alert alert-danger" role="alert" data-bind="visible: errorMessage, text: errorMessage"></div>
-                        <g:form action="login" method="post" class="form-signin form-horizontal login-form">
+                        <g:form class="form-signin form-horizontal login-form">
                             <div class="form-group has-feedback">
                                 <label for='login-pin' class="labelText">Pin:</label>
                                 <input id="login-pin" type='password' name='loginPin' class="form-control"
@@ -31,7 +31,7 @@
                             </div>
 
                             <div class="form-group modal-buttons">
-                                <button id="submit" type="button" class="btn btn-primary" data-bind="click: login">Submit</button>
+                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </g:form>
                     </div>

@@ -4,7 +4,8 @@ function LoginViewModel() {
 
     loginViewModel.errorMessage = ko.observable();
 
-    loginViewModel.login = function() {
+    $('.login-form').submit(function(e) {
+        e.preventDefault();
         loginViewModel.errorMessage('');
         $.ajax({
             url: '/login/login',
@@ -18,7 +19,7 @@ function LoginViewModel() {
                 window.location.href = d.from;
             }
         })
-    };
+    });
 
     ko.applyBindings(loginViewModel);
 }

@@ -24,10 +24,8 @@ class LoginController {
                 if (from.equals('bar')) {
                     session.removeAttribute('from')
                     render JsonOutput.toJson([from: '/bar/index/'])
-                    return
                 } else {
                     render JsonOutput.toJson([message: 'Invalid Access'])
-                    return
                 }
                 break;
             case kitchen: session.setAttribute('kitchen', true)
@@ -35,17 +33,14 @@ class LoginController {
                 if (from.equals('kitchen')) {
                     session.removeAttribute('from')
                     render JsonOutput.toJson([from: '/kitchen/index/'])
-                    return
                 } else {
                     render JsonOutput.toJson([message: 'Invalid Access'])
-                    return
                 }
                 break;
             case manager: session.setAttribute('manager', true)
                 String from = session.getAttribute('from')
                 session.removeAttribute('from')
                 render JsonOutput.toJson([from: '/' + from + '/index/'])
-                return
                 break;
         }
     }
