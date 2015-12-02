@@ -8,7 +8,7 @@
 <body>
 <g:applyLayout name="pages/manager">
     <content tag="details">
-        <h1>The Manager Body</h1>
+        <h1>The Manager</h1>
         <div class="row">
             <div class="col-sm-6">
                 <h3>Food Menu</h3>
