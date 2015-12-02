@@ -241,7 +241,7 @@
             <h3>Order History</h3>
             <table class="table table-stripped">
                 <tr>
-                    <th>Name</th>
+                    <th>Item</th>
                     <th>Count</th>
                     <th>Sales</th>
                 </tr>
