@@ -58,7 +58,6 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
@@ -77,7 +76,6 @@ h6 {
 
 .btn-primary {
     border-color: #fed136;
-    text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
@@ -128,7 +126,6 @@ fieldset[disabled] .btn-primary.active {
     padding: 20px 40px;
     border-color: #5cb85c;
     border-radius: 3px;
-    text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -213,7 +210,6 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .nav li a {
-    text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
@@ -303,7 +299,6 @@ fieldset[disabled] .btn-xl.active {
 
 .main .intro-text .intro-heading {
     margin-bottom: 25px;
-    text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 50px;
     font-weight: 700;
@@ -326,7 +321,6 @@ fieldset[disabled] .btn-xl.active {
 
     .main .intro-text .intro-heading {
         margin-bottom: 50px;
-        text-transform: uppercase;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 75px;
         font-weight: 700;
@@ -346,7 +340,6 @@ section h2.section-heading {
 
 section h3.section-subheading {
     margin-bottom: 75px;
-    text-transform: none;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: italic;
