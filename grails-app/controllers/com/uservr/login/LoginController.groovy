@@ -1,67 +1,47 @@
 package com.uservr.login
 
-import com.uservr.web.*
-import login.LoginService
+import groovy.json.JsonOutput
 
 class LoginController {
 
-    LoginService loginService
-
-    def index() {}
-
-    //Register user view render
-    def registerUser() {
-        render view: 'register'
+    def index() {
+        render view: 'index'
     }
 
-    /**
-     * Register customer for the session
-     * Will keep all customer data in the session object
-     * Not sure what to do with payment stuff yet
-     * Might have payment hold that data and have it hashed or somethign??
-     * TODO figure that out
-     */
-    def registerCustomer() {
-        session["admin"] = loginService.registerCustomer(params)
-        session["name"] = session?.admin?.name
-        forward(controller: 'customer', action: 'index')
-        //Add Payment to their account
-        //Once they pay final bill everything is wiped away
-    }
-
-    //Register the customer and redirect them to the next page
-    def register() {
-
-        if (!loginService.registerUser(params)) {
-            flash.message = message(code: "login.userfound.error")
-        } else {
-            User.findOrSaveWhere(username: params['username'], password: params['password'], name: params['username'])
+    def login(LoginCommand loginCommand) {
+        if (loginCommand.hasErrors()) {
+            render JsonOutput.toJson([message: 'Invalid Pin'])
+            return
         }
-        //TODO change to where this page needs to go
-        //Might have to redirect to central employee location and then redirect based on filter
-       // forward(controller: 'customer', action: 'index')
-    }
 
-    /**
-     * Checks the entered in data against the current users
-     * Adds the user to the session data if found
-     * Otherwise if throws an error
-     * No role checking here that is up to the filter
-     */
-    def login = {
-        def user = User.findWhere(username: params['username'], password: params['password'])
+        def bar = '1111'
+        def kitchen = '2222'
+        def manager = '3333'
 
-        //If customer is found add them to the session info
-        if (user) {
-            session["user"] = user
-            session["name"] = user?.name
-
-            forward(controller: 'customer', action: 'index')
-            return
-
-        } else {
-            flash.error = message(code: 'user.notfound.error')
-            return
+        switch (loginCommand.loginPin) {
+            case bar: session.setAttribute('bar', true)
+                String from = session.getAttribute('from')
+                if (from.equals('bar')) {
+                    session.removeAttribute('from')
+                    render JsonOutput.toJson([from: '/bar/index/'])
+                } else {
+                    render JsonOutput.toJson([message: 'Invalid Access'])
+                }
+                break;
+            case kitchen: session.setAttribute('kitchen', true)
+                String from = session.getAttribute('from')
+                if (from.equals('kitchen')) {
+                    session.removeAttribute('from')
+                    render JsonOutput.toJson([from: '/kitchen/index/'])
+                } else {
+                    render JsonOutput.toJson([message: 'Invalid Access'])
+                }
+                break;
+            case manager: session.setAttribute('manager', true)
+                String from = session.getAttribute('from')
+                session.removeAttribute('from')
+                render JsonOutput.toJson([from: '/' + from + '/index/'])
+                break;
         }
     }
 
@@ -71,5 +51,20 @@ class LoginController {
     def logout() {
         session.invalidate()
         render true
+    }
+
+    def logout2() {
+        session.invalidate()
+        redirect uri: '/'
+    }
+}
+
+class LoginCommand {
+    String loginPin
+
+    static constraints = {
+        loginPin(blank: false, validator: { val ->
+            val.matches(/^[0-9]*$/) && val.length() == 4
+        })
     }
 }

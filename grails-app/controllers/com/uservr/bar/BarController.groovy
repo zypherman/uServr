@@ -7,9 +7,18 @@ class BarController {
 
     BarService barService
 
+    def beforeInterceptor = [action: this.&auth]
+
     def index() {
         def order = barService.getCurrentOrders()
         render view: 'index', model: [order: order]
+    }
+
+    def auth() {
+        if (!session.getAttribute('bar') && !session.getAttribute('manager')) {
+            session.setAttribute('from', 'bar')
+            redirect controller: 'login', action: 'index'
+        }
     }
 
     def order() {
