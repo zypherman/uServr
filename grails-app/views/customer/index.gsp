@@ -7,7 +7,7 @@
 <body>
 <g:applyLayout name="pages/customer">
     <content tag="details">
-        <h1 class="text-center">Uservr</h1>
+        <h1 class="text-center">uServr</h1>
         <img class="img-responsive main-img" src="/assets/WaiterIcon.png"/>
 
         <div>
