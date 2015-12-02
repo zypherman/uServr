@@ -5,7 +5,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Welcome to Uservr!</h4>
+                <h4 class="modal-title"><g:message code="welcome"/> Uservr!</h4>
             </div>
 
             <div class="modal-body">
@@ -14,24 +14,24 @@
                     <div class="panel-heading display-table">
                         <div class="display-tr">
                             <div class="display-td">
-                                <p><strong>Start a new order</strong> <span class="glyphicon glyphicon-question-sign" data-placement="right" data-toggle="tooltip" title="For your first order, we collect all of your payment information. Later on, you simply enter your pin and the last four digits of your credit card number to complete an order."></span></p>
+                                <p><strong><g:message code="startNew"/></strong> <span class="glyphicon glyphicon-question-sign" data-placement="right" data-toggle="tooltip" title="${message(code: 'tool1')}"></span></p>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar">
-                                    Billing
+                                    <g:message code="billing"/>
                                 </div>
                                 <div id="bar-two" class="progress-bar" role="progressbar" style="display: none">
-                                    Payment
+                                    <g:message code="payment"/>
                                 </div>
                                 <div id="bar-three" class="progress-bar" role="progressbar" style="display: none">
-                                    Pin
+                                    <g:message code="pin"/>
                                 </div>
                             </div>
                             <div class="text-right">
-                                All Fields Are Required.
+                                    <g:message code="allFields"/>
                             </div>
                         <g:form action="registerCustomer" method="post" class="form-signin form-horizontal new-customer">
                             <div class="form-one">

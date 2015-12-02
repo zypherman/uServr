@@ -7,7 +7,7 @@
 <body>
 <g:applyLayout name="pages/customer">
     <content tag="details">
-        <h3>Entree</h3>
+        <h3><g:message code="entree"/></h3>
 
         <div class="drink-table">
             <table class="table table-striped">
@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="col-xs-6">
-                                <a class="btn btn-success" data-bind="click: $parent.add">Add</a>
+                                <a class="btn btn-success" data-bind="click: $parent.add"><g:message code="add"/></a>
                             </div>
                         </div>
                     </td>
@@ -37,11 +37,11 @@
                         <div class="collapse" data-bind="attr: {id: $index}">
                             <div class="well">
                                 <div>
-                                    <b>Description:</b> <span data-bind="text: $data.description"></span>
+                                    <b><g:message code="desc"/>:</b> <span data-bind="text: $data.description"></span>
                                 </div>
 
                                 <div>
-                                    <b>Price:</b> <span data-bind="text: $data.price"></span>
+                                    <b><g:message code="price"/>:</b> <span data-bind="text: $data.price"></span>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                 </tbody>
             </table>
         </div>
-        <h3>Side</h3>
+        <h3><g:message code="side"/></h3>
 
         <div class="drink-table">
             <table class="table table-striped">
@@ -71,7 +71,7 @@
                             </div>
 
                             <div class="col-xs-6">
-                                <a class="btn btn-success" data-bind="click: $parent.add">Add</a>
+                                <a class="btn btn-success" data-bind="click: $parent.add"><g:message code="add"/></a>
                             </div>
                         </div>
                     </td>
@@ -81,11 +81,11 @@
                         <div class="collapse" data-bind="attr: {id: $index}">
                             <div class="well">
                                 <div>
-                                    <b>Description:</b> <span data-bind="text: $data.description"></span>
+                                    <b><g:message code="desc"/>:</b> <span data-bind="text: $data.description"></span>
                                 </div>
 
                                 <div>
-                                    <b>Price:</b> <span data-bind="text: $data.price"></span>
+                                    <b><g:message code="price"/>:</b> <span data-bind="text: $data.price"></span>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@
                 </tbody>
             </table>
         </div>
-        <h3>Dessert</h3>
+        <h3><g:message code="dessert"/></h3>
 
         <div class="drink-table">
             <table class="table table-striped">
@@ -115,7 +115,7 @@
                             </div>
 
                             <div class="col-xs-6">
-                                <a class="btn btn-success" data-bind="click: $parent.add">Add</a>
+                                <a class="btn btn-success" data-bind="click: $parent.add"><g:message code="add"/></a>
                             </div>
                         </div>
                     </td>
@@ -125,11 +125,11 @@
                         <div class="collapse" data-bind="attr: {id: $index}">
                             <div class="well">
                                 <div>
-                                    <b>Description:</b> <span data-bind="text: $data.description"></span>
+                                    <b><g:message code="desc"/>:</b> <span data-bind="text: $data.description"></span>
                                 </div>
 
                                 <div>
-                                    <b>Price:</b> <span data-bind="text: $data.price"></span>
+                                    <b><g:message code="price"/>:</b> <span data-bind="text: $data.price"></span>
                                 </div>
                             </div>
                         </div>

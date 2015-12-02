@@ -61,7 +61,7 @@ class CustomerController {
     def repeatCustomer(RepeatCustomerCommand repeatCustomerCommand) {
         CustomerDTO customerDTO = customerService.getCustomer(session)
         if (repeatCustomerCommand.hasErrors() || !customerService.validRepeat(repeatCustomerCommand, customerDTO)){
-            render JsonOutput.toJson([message: 'Order Did Not Send. Try entering your pin and last 4 digits of your credit card again. If you have forgotten this information, logout and register again.'])
+            render JsonOutput.toJson([message: message(code: 'orderNoSend')])
             return
         }
 

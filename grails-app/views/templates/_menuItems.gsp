@@ -1,5 +1,5 @@
 <div class="menu">
-    <h3>Featured Food</h3>
+    <h3><g:message code="fFood"/></h3>
     <hr/>
 
     <div class="row">
@@ -14,7 +14,7 @@
         </g:each>
     </div>
 
-    <h3>Featured Drinks</h3>
+    <h3><g:message code="fDrink"/></h3>
     <hr/>
 
     <div class="row">

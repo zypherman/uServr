@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta name="layout" content="main">
-    <title>The Bar</title>
+    <title><g:message code="theBar"/></title>
 </head>
 
 <body>
 <g:applyLayout name="pages/bar">
     <content tag="details">
-        <h1>The Bar Body</h1>
+        <h1><g:message code="theBarBody"/></h1>
     </content>
     <content tag="templates">
         <g:render template="/templates/orders"/>

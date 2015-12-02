@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="col-xs-6">
-                                <a class="btn btn-success" data-bind="click: $parent.add">Add</a>
+                                <a class="btn btn-success" data-bind="click: $parent.add"><g:message code="add"/></a>
                             </div>
                         </div>
                     </td>
@@ -37,19 +37,19 @@
                         <div class="collapse" data-bind="attr: {id: $index}">
                             <div class="well">
                                 <div>
-                                    <b>Description:</b> <span data-bind="text: $data.description"></span>
+                                    <b><g:message code="desc"/>:</b> <span data-bind="text: $data.description"></span>
                                 </div>
 
                                 <div>
-                                    <b>Size:</b> <span data-bind="text: $data.size"></span>
+                                    <b><g:message code="size"/>:</b> <span data-bind="text: $data.size"></span>
                                 </div>
 
                                 <div>
-                                    <b>Pour:</b> <span data-bind="text: $data.pour"></span>
+                                    <b><g:message code="pour"/>:</b> <span data-bind="text: $data.pour"></span>
                                 </div>
 
                                 <div>
-                                    <b>Price:</b> <span data-bind="text: $data.price"></span>
+                                    <b><g:message code="price"/>:</b> <span data-bind="text: $data.price"></span>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                             </div>
 
                             <div class="col-xs-6">
-                                <a class="btn btn-success" data-bind="click: $parent.add">Add</a>
+                                <a class="btn btn-success" data-bind="click: $parent.add"><g:message code="add"/></a>
                             </div>
                         </div>
                     </td>
@@ -90,19 +90,19 @@
                         <div class="collapse" data-bind="attr: {id: $index}">
                             <div class="well">
                                 <div>
-                                    <b>Description:</b> <span data-bind="text: $data.description"></span>
+                                    <b><g:message code="desc"/>:</b> <span data-bind="text: $data.description"></span>
                                 </div>
 
                                 <div>
-                                    <b>Size:</b> <span data-bind="text: $data.size"></span>
+                                    <b><g:message code="size"/>:</b> <span data-bind="text: $data.size"></span>
                                 </div>
 
                                 <div>
-                                    <b>Pour:</b> <span data-bind="text: $data.pour"></span>
+                                    <b><g:message code="pour"/>:</b> <span data-bind="text: $data.pour"></span>
                                 </div>
 
                                 <div>
-                                    <b>Price:</b> <span data-bind="text: $data.price"></span>
+                                    <b><g:message code="price"/>:</b> <span data-bind="text: $data.price"></span>
                                 </div>
                             </div>
                         </div>

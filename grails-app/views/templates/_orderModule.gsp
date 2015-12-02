@@ -1,5 +1,5 @@
 <div class="top-orders">
-    <h3>Your Order</h3>
+    <h3><g:message code="yourOrder"/></h3>
 </div>
 
 <div class="orders">
@@ -14,9 +14,9 @@
     </table>
     <div>Total: $<span data-bind="text: total"></span></div>
     <g:if test="${session.customer}">
-        <button class="btn btn-success send-order" data-toggle="modal" data-target="#tmpl-repeat-customer" data-bind="enable: orders().length">Send Order!</button>
+        <button class="btn btn-success send-order" data-toggle="modal" data-target="#tmpl-repeat-customer" data-bind="enable: orders().length"><g:message code="sendOrder"/>!</button>
     </g:if>
     <g:else>
-        <button class="btn btn-success send-order" data-toggle="modal" data-target="#registerCustomerModal" data-bind="enable: orders().length">Send Order!</button>
+        <button class="btn btn-success send-order" data-toggle="modal" data-target="#registerCustomerModal" data-bind="enable: orders().length"><g:message code="sendOrder"/>!</button>
     </g:else>
 </div>

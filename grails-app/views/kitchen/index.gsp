@@ -7,7 +7,7 @@
 <body>
 <g:applyLayout name="pages/kitchen">
     <content tag="details">
-        <h1>The Kitchen Body</h1>
+        <h1><g:message code="kitchenBod"/></h1>
     </content>
     <content tag="templates">
         <g:render template="/templates/orders"/>
