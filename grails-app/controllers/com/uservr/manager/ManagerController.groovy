@@ -8,6 +8,8 @@ class ManagerController {
     def menuService
     def orderHistoryService
 
+    def beforeInterceptor = [action: this.&auth]
+
     def index() {
         def drinkViewModel = menuService.drinks
         def foodViewModel = menuService.food
@@ -19,6 +21,13 @@ class ManagerController {
 
     def edit() {
         render view: 'edit'
+    }
+
+    def auth() {
+        if (!session.getAttribute('manager')) {
+            session.setAttribute('from', 'manager')
+            redirect controller: 'login', action: 'index'
+        }
     }
 
     def addDrink(AddDrinkCommand addDrinkCommand) {

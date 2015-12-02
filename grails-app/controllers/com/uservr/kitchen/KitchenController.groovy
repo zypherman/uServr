@@ -7,9 +7,18 @@ class KitchenController {
 
     KitchenService kitchenService
 
+    def beforeInterceptor = [action: this.&auth]
+
     def index() {
         def order = kitchenService.getCurrentOrders()
         render view: 'index', model: [order: order]
+    }
+
+    def auth() {
+        if (!session.getAttribute('kitchen') && !session.getAttribute('manager')) {
+            session.setAttribute('from', 'kitchen')
+            redirect controller: 'login', action: 'index'
+        }
     }
 
     def order() {
