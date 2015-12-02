@@ -3,6 +3,8 @@ package com.uservr.kitchen
 import grails.converters.JSON
 import kitchen.KitchenService
 
+import java.util.concurrent.ConcurrentLinkedQueue
+
 class KitchenController {
 
     KitchenService kitchenService
@@ -10,8 +12,7 @@ class KitchenController {
     def beforeInterceptor = [action: this.&auth]
 
     def index() {
-        def order = kitchenService.getCurrentOrders()
-        render view: 'index', model: [order: order]
+        render view: 'index'
     }
 
     def auth() {
@@ -39,6 +40,7 @@ class KitchenController {
     }
 
     def getCurrentOrders() {
+        kitchenService.newOrders = new ConcurrentLinkedQueue()
         render JSON.use('deep') { raw(kitchenService.getCurrentOrders() as JSON) }
     }
 

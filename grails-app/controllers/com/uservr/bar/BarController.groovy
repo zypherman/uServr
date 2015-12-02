@@ -3,6 +3,8 @@ package com.uservr.bar
 import bar.BarService
 import grails.converters.JSON
 
+import java.util.concurrent.ConcurrentLinkedQueue
+
 class BarController {
 
     BarService barService
@@ -10,8 +12,7 @@ class BarController {
     def beforeInterceptor = [action: this.&auth]
 
     def index() {
-        def order = barService.getCurrentOrders()
-        render view: 'index', model: [order: order]
+        render view: 'index'
     }
 
     def auth() {
@@ -39,6 +40,7 @@ class BarController {
     }
 
     def getCurrentOrders() {
+        barService.newOrders = new ConcurrentLinkedQueue()
         render JSON.use('deep') { raw(barService.getCurrentOrders() as JSON) }
     }
 

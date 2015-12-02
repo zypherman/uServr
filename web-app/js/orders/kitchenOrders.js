@@ -3,6 +3,8 @@ function KitchenOrderViewModel() {
 
     kitchenOrderViewModel.orders = ko.observableArray();
 
+    getCurrentKitchenOrders();
+
     var kitchenEvent = new EventSource('/kitchen/order');
 
     kitchenEvent.onmessage = function(event) {
@@ -18,8 +20,6 @@ function KitchenOrderViewModel() {
         kitchenOrderViewModel.orders.remove(e);
         processKitchenOrder(e);
     };
-
-    getCurrentKitchenOrders();
 
     function getCurrentKitchenOrders() {
         $.ajax({
