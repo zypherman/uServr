@@ -20,9 +20,10 @@
 <div class="main img-responsive">
     <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">Welcome To uServr!</div>
-
-            <div class="intro-heading">Please select a view</div>
+            <div class="intro-lead-in">
+                <h1>Welcome To uServr!</h1>
+                <h1>Please select a view</h1>
+            </div>
 
             <div class="btn-group-vertical">
                 <g:link type="button" class="btn btn-xl btn-lg" controller="customer" action="index">Customer</g:link>
