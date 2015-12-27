@@ -3,6 +3,8 @@ function BarOrderViewModel() {
 
     barOrderViewModel.orders = ko.observableArray();
 
+    getCurrentBarOrders();
+
     var barEvent = new EventSource('/bar/order');
 
     barEvent.onmessage = function(event) {
@@ -18,8 +20,6 @@ function BarOrderViewModel() {
         barOrderViewModel.orders.remove(e);
         processBarOrder(e)
     };
-
-    getCurrentBarOrders();
 
     function getCurrentBarOrders() {
         $.ajax({
